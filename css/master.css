@@ -1,0 +1,47 @@
+body {
+  margin: 0; }
+
+.home {
+  height: auto;
+  width: 100%; }
+
+.glyphicon {
+  position: absolute !important;
+  top: 50vh !important;
+  color: white;
+  -webkit-transition: font-size 0.5s, height 0.5s;
+  /* Safari */
+  transition: font-size 0.5s, height 0.5s; }
+  .glyphicon:hover {
+    font-size: 20px;
+    top: 49vh; }
+
+.glyphicon-chevron-left {
+  left: 15px; }
+
+.glyphicon-chevron-right {
+  right: 15px; }
+
+.background {
+  background-image: url("http://i.imgur.com/AdrfEb2.gif");
+  background-position: left bottom;
+  background-size: cover;
+  height: 100vh;
+  width: 100%; }
+  .background .main-nav {
+    padding: 30px;
+    font-family: 'Julius Sans One', sans-serif; }
+    .background .main-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .background .main-nav ul li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px; }
+        .background .main-nav ul li a {
+          font-size: 22px;
+          line-height: 20px;
+          color: white; }
+
+/*# sourceMappingURL=master.css.map */

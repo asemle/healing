@@ -1,0 +1,24 @@
+.home {
+  height: auto;
+  width: 100%;
+}
+
+.glyphicon {
+  position: absolute!important;
+  top: 50vh!important;
+  color: white;
+  -webkit-transition: font-size 0.5s, height 0.5s; /* Safari */
+    transition: font-size 0.5s, height 0.5s;
+  &:hover {
+    font-size: 20px;
+    top: 49vh;
+  }
+}
+
+.glyphicon-chevron-left {
+  left: 15px;
+}
+
+.glyphicon-chevron-right {
+  right:15px;
+}

@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+@import 'home';
+
+.background {
+  // background-image: url('http://static4.businessinsider.com/image/520e788f69bedd084b000006/ibhwzcrdlyu6lg.gif');
+  // background-image: url('http://i.imgur.com/gmuhE5e.gif');
+  background-image: url('http://i.imgur.com/AdrfEb2.gif');
+  background-position: left bottom;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  .main-nav {
+    padding: 30px;
+  font-family: 'Julius Sans One', sans-serif;
+// font-family: 'Satisfy', cursive;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        a {
+          font-size: 22px;
+          line-height: 20px;
+          color: white;
+          // text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+// <nav class='main-nav'>
+//   <ul class>
+//     <li><a ui-sref="about"></a>About Lisa</li>
+//     <li><a ui-sref="testimonials"></a>Testimonials</li>
+//     <li><a ui-sref="store"></a>For Sale</li>
+//   </ul>
+// </nav>
