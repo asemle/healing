@@ -4,17 +4,36 @@ body {
 
 @import 'home';
 
+body {
+  // background-image: url('http://i.imgur.com/AdrfEb2.gif');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  overflow: scroll;
+  .glyphicon {
+    color: white;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+}
 .background {
+
+
   // background-image: url('http://static4.businessinsider.com/image/520e788f69bedd084b000006/ibhwzcrdlyu6lg.gif');
   // background-image: url('http://i.imgur.com/gmuhE5e.gif');
-  background-image: url('http://i.imgur.com/AdrfEb2.gif');
-  background-position: left bottom;
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
+  // background-image: url('http://i.imgur.com/AdrfEb2.gif');
+
   .main-nav {
+    position: fixed;
     padding: 30px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: 'Julius Sans One', sans-serif!important;
 // font-family: 'Satisfy', cursive;
     ul {
       list-style: none;
@@ -27,7 +46,7 @@ body {
         a {
           font-size: 22px;
           line-height: 20px;
-          color: white;
+          // color: white;
           // text-transform: uppercase;
         }
       }

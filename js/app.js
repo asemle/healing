@@ -1,18 +1,19 @@
-angular.module('healing', ['ui.router','ui.bootstrap'])
-.config(function($urlRouterProvider, $stateProvider) {
+angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch'])
+.config(function($urlRouterProvider, $stateProvider, $qProvider) {
+  $qProvider.errorOnUnhandledRejections(false);
   $stateProvider.state('home', {
     templateUrl:'./views/home.html',
     url:'/',
-    // controller: 'homeCtrl'
+    controller: 'homeCtrl'
   }).state('about', {
     templateUrl:'./views/about.html',
-    url:'aboutLisa'
+    url:'/aboutLisa'
   }).state('testimonials', {
     templateUrl:'./views/testimonials.html',
-    url:'testimonials'
+    url:'/testimonials'
   }).state('store', {
     templateUrl:'./views/store.html',
-    url:'store'
+    url:'/store'
   })
   $urlRouterProvider.otherwise('/');
 })

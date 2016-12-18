@@ -1,12 +1,33 @@
 .home {
-  height: auto;
+  height: 2000px;
   width: 100%;
+  color: white;
+  text-align: center;
+  .home1 {
+    margin-top: 49vh;
+    text-align: center;
+    .Q {
+      margin: 0 auto;
+      font-size: 30px;
+      display: none;
+
+      position: fixed;
+      top: 48vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+    .Q1 {
+      display: block!important;
+      // margin-top: 50px
+    }
+  }
 }
 
 .glyphicon {
   position: absolute!important;
   top: 50vh!important;
-  color: white;
+  // color: white;
   -webkit-transition: font-size 0.5s, height 0.5s; /* Safari */
     transition: font-size 0.5s, height 0.5s;
   &:hover {
@@ -21,4 +42,8 @@
 
 .glyphicon-chevron-right {
   right:15px;
+}
+
+@media(max-width: 500px) {
+  
 }
