@@ -21,6 +21,8 @@ body {
       left: 0;
       right: 0;
       margin: 0 auto; }
+    .home .home1 .q1 {
+      display: block; }
 
 .home .glyphicon {
   position: absolute;
@@ -44,9 +46,9 @@ body {
       display: none !important; }
     .home .glyphicon-chevron-right {
       display: none !important; } }
-.connect .contact-box {
+.connection .contact-box {
   margin-top: 30vh; }
-  .connect .contact-box .contact-form {
+  .connection .contact-box .contact-form {
     font-family: 'Roboto Slab', serif;
     width: 70%;
     margin: 0 auto;
@@ -56,56 +58,63 @@ body {
     padding: 10px;
     position: relative;
     color: white; }
-    .connect .contact-box .contact-form .glyphicon-remove-circle {
+    .connection .contact-box .contact-form .glyphicon-remove-circle {
       position: absolute;
       right: 3px;
       top: 3px;
       font-size: 18px;
       transition: all 0.5s; }
-      .connect .contact-box .contact-form .glyphicon-remove-circle:hover {
+      .connection .contact-box .contact-form .glyphicon-remove-circle:hover {
         font-size: 19px;
         color: red; }
-    .connect .contact-box .contact-form h4 {
+    .connection .contact-box .contact-form h4 {
       text-align: center;
       margin: 20px 0 30px 0;
       font-size: 19px;
       color: black;
       font-family: 'Julius Sans One', sans-serif; }
-    .connect .contact-box .contact-form input {
+    .connection .contact-box .contact-form input {
       margin-bottom: 20px;
       color: black; }
-    .connect .contact-box .contact-form .emailHead {
+    .connection .contact-box .contact-form .emailHead {
       display: inline-block;
       margin-right: 5px; }
-    .connect .contact-box .contact-form .glyphicon-question-sign {
+    .connection .contact-box .contact-form .glyphicon-question-sign {
       font-size: 14px;
       padding-left: 5px;
       cursor: help; }
-    .connect .contact-box .contact-form .popover {
+    .connection .contact-box .contact-form .popover {
       color: black;
       font-size: 12px;
       border: 1px solid #9370DB;
       background-color: #CEBFEF; }
-      .connect .contact-box .contact-form .popover.arrow {
+      .connection .contact-box .contact-form .popover.arrow {
         background-color: red; }
-    .connect .contact-box .contact-form .firstName {
+    .connection .contact-box .contact-form .firstName {
       width: 49%;
       margin-right: 2%; }
-    .connect .contact-box .contact-form .lastName {
+    .connection .contact-box .contact-form .lastName {
       width: 49%; }
-    .connect .contact-box .contact-form .emailBox {
+    .connection .contact-box .contact-form .emailBox {
       width: 100%; }
-    .connect .contact-box .contact-form textarea {
+    .connection .contact-box .contact-form textarea {
       color: black;
       width: 100%;
       height: 80px;
       margin-bottom: 10px;
       border: 1px solid #CCCCCC; }
-    .connect .contact-box .contact-form button {
+    .connection .contact-box .contact-form button {
       width: 100%;
       text-align: center;
       border-radius: 5px; }
 
+@media (max-width: 500px) {
+  .connection {
+    height: 677px;
+    overflow: scroll; }
+    .connection .contact-box .contact-form {
+      width: 90%;
+      margin-bottom: 20%; } }
 body {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -146,6 +155,11 @@ header .connect {
   padding: 30px;
   font-size: 22px;
   position: fixed; }
+  header .connect .glyphicon-envelope {
+    transition: all 0.5s; }
+    header .connect .glyphicon-envelope:hover {
+      color: #337ab7;
+      font-size: 26px; }
 
 @media (max-width: 500px) {
   .background .main-nav ul li {
@@ -153,6 +167,8 @@ header .connect {
     font-size: 25px;
     margin-bottom: 20px; }
     .background .main-nav ul li.store {
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+  .background .connect .glyphicon-envelope {
+    font-size: 28px; } }
 
 /*# sourceMappingURL=master.css.map */

@@ -1,4 +1,4 @@
-.connect {
+.connection {
   .contact-box {
     margin-top: 30vh;
     .contact-form {
@@ -77,6 +77,18 @@
   }
 }
 
+@media (max-width: 500px) {
+  .connection {
+    height: 677px;
+    overflow: scroll;
+    .contact-box {
+      .contact-form {
+        width: 90%;
+        margin-bottom: 20%;
+      }
+    }
+  }
+}
 // <div class="connect container">
 //   <div class="contact-box">
 //     <div class="contact-form">

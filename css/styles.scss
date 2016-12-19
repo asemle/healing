@@ -66,6 +66,14 @@ header {
     padding: 30px;
     font-size: 22px;
     position: fixed;
+
+    .glyphicon-envelope {
+      transition: all 0.5s;
+      &:hover {
+      color: #337ab7;
+      font-size: 26px;
+    }
+  }
   }
 }
 @media (max-width: 500px) {
@@ -80,6 +88,11 @@ header {
           margin-bottom: 0;
         }
       }
+    }
+  }
+  .connect {
+    .glyphicon-envelope {
+      font-size: 28px;
     }
   }
 }
