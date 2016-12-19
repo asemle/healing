@@ -1,23 +1,152 @@
-/*
-Errno::ENOENT: No such file or directory - styles.scss
+body {
+  margin: 0; }
 
-Backtrace:
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `read'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:484:in `update_stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:294:in `watch'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin.rb:109:in `method_missing'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Errno::ENOENT: No such file or directory - styles.scss"; }
+.home {
+  height: 4000px;
+  width: 100%;
+  color: white;
+  text-align: center; }
+  .home .home1 {
+    margin-top: 49vh;
+    text-align: center; }
+    .home .home1 .Q {
+      margin: 0 auto;
+      width: 60%;
+      font-size: 30px;
+      display: none;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 300;
+      position: fixed;
+      top: 48vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+    .home .home1 .q1 {
+      display: block; }
+
+.home .glyphicon {
+  position: absolute;
+  top: 50vh;
+  -webkit-transition: font-size 0.5s, height 0.5s;
+  /* Safari */
+  transition: font-size 0.5s, height 0.5s; }
+  .home .glyphicon:hover {
+    font-size: 20px; }
+.home .glyphicon-chevron-left {
+  left: 15px; }
+.home .glyphicon-chevron-right {
+  right: 15px; }
+
+@media (max-width: 500px) {
+  .glyphicon-chevron-left {
+    display: none; }
+
+  .glyphicon-chevron-right {
+    display: none; } }
+.connect .contact-box {
+  margin-top: 30vh; }
+  .connect .contact-box .contact-form {
+    font-family: 'Roboto Slab', serif;
+    width: 70%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    color: white; }
+    .connect .contact-box .contact-form .glyphicon-remove-circle {
+      position: absolute;
+      right: 3px;
+      top: 3px;
+      font-size: 18px;
+      transition: all 0.5s; }
+      .connect .contact-box .contact-form .glyphicon-remove-circle:hover {
+        font-size: 19px;
+        color: red; }
+    .connect .contact-box .contact-form h4 {
+      text-align: center;
+      margin: 20px 0 30px 0;
+      font-size: 19px;
+      color: black;
+      font-family: 'Julius Sans One', sans-serif; }
+    .connect .contact-box .contact-form input {
+      margin-bottom: 20px;
+      color: black; }
+    .connect .contact-box .contact-form .emailHead {
+      display: inline-block;
+      margin-right: 5px; }
+    .connect .contact-box .contact-form .glyphicon-question-sign {
+      font-size: 14px;
+      padding-left: 5px;
+      cursor: help; }
+    .connect .contact-box .contact-form .popover {
+      color: black;
+      font-size: 12px;
+      border: 1px solid #9370DB;
+      background-color: #CEBFEF; }
+      .connect .contact-box .contact-form .popover.arrow {
+        background-color: red; }
+    .connect .contact-box .contact-form .firstName {
+      width: 49%;
+      margin-right: 2%; }
+    .connect .contact-box .contact-form .lastName {
+      width: 49%; }
+    .connect .contact-box .contact-form .emailBox {
+      width: 100%; }
+    .connect .contact-box .contact-form textarea {
+      color: black;
+      width: 100%;
+      height: 80px;
+      margin-bottom: 10px;
+      border: 1px solid #CCCCCC; }
+    .connect .contact-box .contact-form button {
+      width: 100%;
+      text-align: center;
+      border-radius: 5px; }
+
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: auto;
+  width: 100%;
+  overflow: scroll; }
+  body .glyphicon {
+    color: white; }
+  body a {
+    color: white; }
+    body a:hover {
+      color: white; }
+
+header .main-nav {
+  position: fixed;
+  padding: 30px;
+  font-family: "Julius Sans One", sans-serif !important; }
+  header .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    header .main-nav ul li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 20px; }
+      header .main-nav ul li a {
+        font-size: 22px;
+        line-height: 20px; }
+header .connect {
+  top: 0;
+  right: 0;
+  padding: 30px;
+  font-size: 22px;
+  position: fixed; }
+
+@media (max-width: 500px) {
+  .background .main-nav ul li {
+    display: list-item;
+    margin-bottom: 30px; }
+    .background .main-nav ul li.store {
+      margin-bottom: 0; } }
+
+/*# sourceMappingURL=master.css.map */
