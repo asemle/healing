@@ -21,8 +21,6 @@ body {
       left: 0;
       right: 0;
       margin: 0 auto; }
-    .home .home1 .q1 {
-      display: block; }
 
 .home .glyphicon {
   position: absolute;
@@ -40,8 +38,8 @@ body {
 @media (max-width: 500px) {
   .home {
     height: 3500px; }
-    .home .home1 {
-      margin-top: 30vh; }
+    .home .home1 .Q {
+      top: 40vh; }
     .home .glyphicon-chevron-left {
       display: none; }
     .home .glyphicon-chevron-right {

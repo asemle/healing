@@ -61,7 +61,7 @@ angular.module('healing')
           $('.q7').fadeOut();
       }
         //q8
-      if ($('.background').scrollTop() > perc * 73 && $('.background').scrollTop() < perc * 85) {
+      if ($('.background').scrollTop() > perc * 72 && $('.background').scrollTop() < perc * 100) {
           $('.q8').fadeIn(1400);
       }
       else {
