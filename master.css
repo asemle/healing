@@ -112,7 +112,7 @@ body {
   background-size: cover;
   height: auto;
   width: 100%;
-  overflow: scroll; }
+  overflow: hidden; }
   body .glyphicon {
     color: white; }
   body a {
