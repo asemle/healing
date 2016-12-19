@@ -2,7 +2,7 @@ body {
   margin: 0; }
 
 .home {
-  height: 4000px;
+  height: 6000px;
   width: 100%;
   color: white;
   text-align: center; }
@@ -112,13 +112,17 @@ body {
   background-size: cover;
   height: 1vh;
   width: 100%;
-  overflow: scroll; }
+  overflow: scroll;
+  position: fixed; }
   body .glyphicon {
     color: white; }
   body a {
     color: white; }
     body a:hover {
       color: white; }
+  body .background {
+    height: 1000px;
+    overflow: scroll; }
 
 header .main-nav {
   position: fixed;

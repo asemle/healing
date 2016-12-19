@@ -16,6 +16,7 @@ body {
   height: 1vh;
   width: 100%;
   overflow: scroll;
+  position: fixed;
   .glyphicon {
     color: white;
   }
@@ -24,6 +25,10 @@ body {
     &:hover {
       color: white;
     }
+  }
+  .background {
+    height: 1000px;
+    overflow: scroll;
   }
 }
 header {
