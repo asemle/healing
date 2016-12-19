@@ -52,6 +52,9 @@
 }
 }
 @media(max-width: 500px) {
+  .home {
+    height: 3000px;
+  }
   .glyphicon-chevron-left {
     display: none;
   }
