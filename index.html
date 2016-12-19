@@ -4,24 +4,28 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="/css/master.css">
-    <link href="https://fonts.googleapis.com/css?family=EB+Garamond|Julius+Sans+One|Poiret+One|Reem+Kufi|Satisfy" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Roboto+Slab:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   </head>
-  <body ng-controller='indexCtrl' ng-style="backgroundStyle">
+  <body ng-controller='indexCtrl' ng-swipe-left="changeBackgroundLeft()" ng-swipe-right="changeBackgroundRight()" ng-style="backgroundStyle">
 <div class="background">
 <header>
   <nav class='main-nav'>
     <ul class>
       <li><a ui-sref="about"><span>About Lisa</span><span class="icon-close"></span></a></li>
       <li><a ui-sref="testimonials"><span>Testimonials</span><span class="icon-close"></span></a></li>
-      <li><a ui-sref="store"><span>For Sale</span><span class="icon-close"></span></a></li>
+      <li class='store'><a ui-sref="store"><span>For Sale</span><span class="icon-close"></span></a></li>
     </ul>
   </nav>
+  <div class='connect'>
+    <a ui-sref="contact"><span class="glyphicon glyphicon-envelope"></span></a>
+  </div>
 </header>
 
 
   <ui-view></ui-view>
+
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -32,6 +36,7 @@
 <script src="js/app.js"></script>
 <script src="js/indexCtrl.js" charset="utf-8"></script>
 <script src="js/homeCtrl.js" charset="utf-8"></script>
+<script src="js/contactCtrl.js" charset="utf-8"></script>
 </script>
   </body>
 </html>

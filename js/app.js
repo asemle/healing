@@ -5,6 +5,10 @@ angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch'])
     templateUrl:'./views/home.html',
     url:'/',
     controller: 'homeCtrl'
+  }).state('contact', {
+    templateUrl:'./views/contact.html',
+    url:'/contact',
+    controller: 'contactCtrl'
   }).state('about', {
     templateUrl:'./views/about.html',
     url:'/aboutLisa'

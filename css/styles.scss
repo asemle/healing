@@ -3,8 +3,11 @@ body {
 }
 
 @import 'home';
+@import 'contact';
+
 
 body {
+
   // background-image: url('http://i.imgur.com/AdrfEb2.gif');
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -23,7 +26,7 @@ body {
     }
   }
 }
-.background {
+header {
 
 
   // background-image: url('http://static4.businessinsider.com/image/520e788f69bedd084b000006/ibhwzcrdlyu6lg.gif');
@@ -52,8 +55,29 @@ body {
       }
     }
   }
+  .connect {
+    top:0;
+    right: 0;
+    padding: 30px;
+    font-size: 22px;
+    position: fixed;
+  }
 }
-
+@media (max-width: 500px) {
+  .background {
+  .main-nav {
+    ul {
+      li {
+        display: list-item;
+        margin-bottom: 30px;
+        &.store {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+}
 // <nav class='main-nav'>
 //   <ul class>
 //     <li><a ui-sref="about"></a>About Lisa</li>

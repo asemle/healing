@@ -1,6 +1,7 @@
 angular.module('healing')
 .controller('indexCtrl', function($scope) {
-  var backgrounds = [{'background-image': 'url(css/media/benchPond.gif)', 'background-position': 'bottom center'}, {'background-image':'url(css/media/rollingClouds.gif)'}, {'background-image': 'url(css/media/snowFalling.gif)'}, {'background-image':'url(css/media/beachWaves.gif)'}, {'background-image':'url(css/media/river.jpg)'}, {'background-image':'url(css/media/momBeach.gif)'}, {'background-image':'url(css/media/reeds.gif)'}, {'background-image':'url(css/media/beachSand.gif)'}, {'background-image':'url(css/media/jungle.gif)', 'background-position': 'left'} ]
+  var backgrounds = [{'background-image': 'url(css/media/benchPond.gif)', 'background-position': 'center'}, {'background-image':'url(css/media/rollingClouds.gif)'}, {'background-image': 'url(css/media/snowFalling.gif)'}, {'background-image':'url(css/media/beachWaves.gif)'}, {'background-image':'url(css/media/river.jpg)'}, {'background-image':'url(css/media/reeds.gif)'}, {'background-image':'url(css/media/beachSand.gif)'}, {'background-image':'url(css/media/jungle.gif)', 'background-position': 'left'} ]
+  // var colors = [{'color':'brown'}, {'color':'white'}, {'color':''}, {'color':''}, {'color':''}, {'color':''}, {'color':''}, {'color':''}]
   var count = 0;
   $scope.backgroundStyle = backgrounds[count]
   $scope.changeBackgroundLeft = function() {
@@ -22,5 +23,5 @@ angular.module('healing')
     }
     $scope.backgroundStyle = backgrounds[count];
   }
-  
+
 })

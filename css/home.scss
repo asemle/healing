@@ -1,38 +1,44 @@
 .home {
-  height: 2000px;
+  height: 4000px;
   width: 100%;
   color: white;
   text-align: center;
   .home1 {
     margin-top: 49vh;
     text-align: center;
+    // font-family: 'Roboto Slab', serif;
+    // font-family: 'Questrial', sans-serif;
+    // font-family: 'Julius Sans One', sans-serif;
+
     .Q {
       margin: 0 auto;
+      width: 60%;
       font-size: 30px;
       display: none;
-
+      font-family: 'Roboto Slab', serif;
+      font-weight: 300;
       position: fixed;
       top: 48vh;
       left: 0;
       right: 0;
       margin: 0 auto;
     }
-    .Q1 {
-      display: block!important;
+    .q1 {
+      display: block;
       // margin-top: 50px
     }
   }
 }
-
+.home {
 .glyphicon {
-  position: absolute!important;
-  top: 50vh!important;
+  position: absolute;
+  top: 50vh;
   // color: white;
   -webkit-transition: font-size 0.5s, height 0.5s; /* Safari */
     transition: font-size 0.5s, height 0.5s;
   &:hover {
     font-size: 20px;
-    top: 49vh;
+    // top: 49vh;
   }
 }
 
@@ -43,7 +49,12 @@
 .glyphicon-chevron-right {
   right:15px;
 }
-
+}
 @media(max-width: 500px) {
-  
+  .glyphicon-chevron-left {
+    display: none;
+  }
+  .glyphicon-chevron-right {
+    display: none;
+  }
 }
