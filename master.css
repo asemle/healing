@@ -39,7 +39,7 @@ body {
 
 @media (max-width: 500px) {
   .home {
-    height: 3000px; }
+    height: 3500px; }
 
   .glyphicon-chevron-left {
     display: none; }
@@ -152,7 +152,8 @@ header .connect {
 @media (max-width: 500px) {
   .background .main-nav ul li {
     display: list-item;
-    margin-bottom: 30px; }
+    font-size: 25px;
+    margin-bottom: 20px; }
     .background .main-nav ul li.store {
       margin-bottom: 0; } }
 

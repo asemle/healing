@@ -12,6 +12,9 @@ angular.module('healing')
    });
    var perc = $('.home').height() * .01;
    $('.background').bind('scroll', function() {
+     if ($('.background').scrollTop() < perc * 2) {
+         $('.q1').show();
+     }
       if ($('.background').scrollTop() > perc * 2) {
           $('.q1').fadeOut();
       }
