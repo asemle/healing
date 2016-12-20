@@ -1,13 +1,15 @@
 .testWrap {
   margin: 0!important;
   height: 100vh;
-
   width: 100vw;
   overflow-y: scroll;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(192,192,192, 0.5);
   padding-top: 35vh;
   .innerTest {
+    margin-top: 100%;
     height: 100%;
+    animation: slideIn 0.5s 1 forwards;
+
   .mainQuote {
     color: white;
     font-size: 40px;
@@ -16,6 +18,22 @@
     margin: 0 auto 50px auto;
     font-family: 'Satisfy', cursive;
     text-align: center;
+    opacity: 0;
+    animation: fadeIn 10s infinite;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+    20% {
+      opacity: 1;
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
   .testListWrap {
     width: 85%;
@@ -25,6 +43,7 @@
       list-style: none;
       padding: 25px 20px 0px 20px;
       border: 2px solid white;
+      background-color: rgba(255,255,255, 0.5);
       .test {
         margin-bottom: 30px;
         font-size: 18px;
@@ -35,6 +54,25 @@
   }
 }
 }
+
+@keyframes slideIn {
+  0% {
+    margin-top: 100%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@media(max-width: 991px) {
+  .testWrap {
+    .innerTest {
+    .mainQuote {
+      font-size: 30px;
+    }
+  }
+}
+}
+
 
 @media (max-width: 500px) {
   .testWrap {
@@ -57,6 +95,17 @@
 }
 
 }
+}
+@media (max-width: 350px) {
+  .testWrap {
+    .innerTest {
+    .mainQuote {
+      font-size: 20px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  }
+  }
 }
 // <div class="testWrap">
 //     <div class="innerTest container">

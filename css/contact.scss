@@ -1,4 +1,7 @@
 .connection {
+  height: 100vh;
+  margin-top: 100%;
+  animation: slideIn 0.5s 1 forwards;
   .contact-box {
     margin-top: 30vh;
     .contact-form {
@@ -80,7 +83,6 @@
 
 @media (max-width: 500px) {
   .connection {
-    height: 100vh;
     overflow: scroll;
     .contact-box {
       .contact-form {

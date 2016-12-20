@@ -1,5 +1,8 @@
 angular.module('healing')
 .controller('homeCtrl', function($scope, $element, $document) {
+  $scope.state = 'home';
+  $('.main-nav').show();
+  $('.connect').show();
   $('.background').bind('scroll', function() {
      if ($('.background').scrollTop() > 0) {
          $('.glyphicon-chevron-left').fadeOut();

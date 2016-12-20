@@ -1,5 +1,5 @@
 angular.module('healing')
-.controller('testimonialsCtrl', function($scope, $interval) {
+.controller('testimonialsCtrl', function($scope, $interval, $state) {
 
   $('.testWrap').bind('scroll', function() {
      if ($('.testWrap').scrollTop() > 0) {

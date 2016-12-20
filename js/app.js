@@ -23,6 +23,7 @@ angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch', 'ngAnimate'])
   $urlRouterProvider.otherwise('/');
 })
 
+
 // angular.module('riskMatch', ['ui.bootstrap', 'ui.router'])
 //     .config(function($stateProvider, $urlRouterProvider) {
 //         $stateProvider

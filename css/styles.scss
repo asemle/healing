@@ -5,6 +5,7 @@ body {
 @import 'home';
 @import 'contact';
 @import 'testimonials';
+@import 'about';
 
 
 body {
@@ -34,7 +35,6 @@ body {
 }
 header {
 
-
   // background-image: url('http://static4.businessinsider.com/image/520e788f69bedd084b000006/ibhwzcrdlyu6lg.gif');
   // background-image: url('http://i.imgur.com/gmuhE5e.gif');
   // background-image: url('http://i.imgur.com/AdrfEb2.gif');
@@ -51,16 +51,33 @@ header {
       li {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 20px;
+        margin-right: 5px;
+
         a {
           font-size: 22px;
           line-height: 20px;
           transition: all .35s cubic-bezier(.23,1,.32,1);
+          transition: 0.3s all;
           &:hover {
-            color: #337ab7;
+            color: #23527c;
           }
           // color: white;
           // text-transform: uppercase;
+        }
+        .closer {
+          display: inline-block;
+          padding-left: 6px;
+          width: 18px!important;
+          height: 20px!important;
+          color: #23527c;
+          &:hover {
+
+            text-decoration: none;
+          }
+        }
+        .activeLink {
+          color: #23527c;
+          text-decoration: underline;
         }
       }
     }

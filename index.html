@@ -16,9 +16,9 @@
 <header>
   <nav class='main-nav'>
     <ul class>
-      <li class="aboutNav"><a ui-sref="about"><span>About Lisa</span><span class="icon-close"></span></a></li>
-      <li class="testNav"><a ui-sref="testimonials"><span>Testimonials</span><span class="icon-close"></span></a></li>
-      <li class='storeNav'><a ui-sref="store"><span>For Sale</span><span class="icon-close"></span></a></li>
+      <li class="aboutNav"><a ui-sref="about"><span ng-class="{activeLink: state === 'about'}">About Lisa</span></a><a class="closer aboutCloser" ui-sref="home"><span ng-show="state === 'about'"> x</span></a></li>
+      <li class="testNav"><a ui-sref="testimonials"><span ng-class="{activeLink: state === 'testimonials'}">Testimonials</span></a><a class="closer testCloser" ui-sref="home"><span ng-show="state === 'testimonials'"> x</span></a></li>
+      <li class='storeNav'><a ui-sref="store"><span ng-class="{activeLink: state === 'store'}">For Sale</span></a><a class="closer storeCloser"ui-sref="home"><span ng-show="state === 'store'"> x</span></a></li>
     </ul>
   </nav>
   <div class='connect'>
