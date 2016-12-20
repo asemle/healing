@@ -14,7 +14,8 @@ angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch'])
     url:'/aboutLisa'
   }).state('testimonials', {
     templateUrl:'./views/testimonials.html',
-    url:'/testimonials'
+    url:'/testimonials',
+    controller: 'testimonialsCtrl'
   }).state('store', {
     templateUrl:'./views/store.html',
     url:'/store'

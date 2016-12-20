@@ -115,6 +115,29 @@ body {
     .connection .contact-box .contact-form {
       width: 90%;
       margin-bottom: 20%; } }
+.testWrap {
+  margin: 0 !important;
+  height: auto;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-top: 30vh; }
+  .testWrap .mainQuote {
+    color: white;
+    font-size: 30px;
+    height: 150px;
+    width: 90%;
+    margin: auto; }
+  .testWrap .testListWrap {
+    width: 80%;
+    margin: 30px auto;
+    margin-bottom: 150px; }
+    .testWrap .testListWrap .testList {
+      list-style: none;
+      padding-left: 0; }
+      .testWrap .testListWrap .testList .test {
+        margin-bottom: 10px;
+        font-size: 20px; }
+
 body {
   background-attachment: fixed;
   background-repeat: no-repeat;

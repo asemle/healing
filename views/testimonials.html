@@ -1,0 +1,14 @@
+<div class="testWrap">
+    <div class="innerTest container">
+        <div class="mainQuote">
+            {{mainTest.quote}} {{mainTest.client}}
+        </div>
+        <div class="testListWrap">
+            <ul class='testList'>
+                <li class="test" ng-repeat="test in testimonials">
+                    {{test.quote}} {{test.client}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
