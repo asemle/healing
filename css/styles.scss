@@ -54,6 +54,10 @@ header {
         a {
           font-size: 22px;
           line-height: 20px;
+          transition: all .35s cubic-bezier(.23,1,.32,1);
+          &:hover {
+            color: #337ab7;
+          }
           // color: white;
           // text-transform: uppercase;
         }
