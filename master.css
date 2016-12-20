@@ -110,34 +110,48 @@ body {
 
 @media (max-width: 500px) {
   .connection {
-    height: 677px;
+    height: 100vh;
     overflow: scroll; }
     .connection .contact-box .contact-form {
       width: 90%;
       margin-bottom: 20%; } }
 .testWrap {
   margin: 0 !important;
-  height: auto;
+  height: 100vh;
   width: 100vw;
+  overflow-y: scroll;
   background-color: rgba(255, 255, 255, 0.5);
-  padding-top: 30vh; }
-  .testWrap .mainQuote {
-    color: white;
-    font-size: 30px;
-    height: 150px;
-    width: 90%;
-    margin: auto; }
-  .testWrap .testListWrap {
-    width: 80%;
-    margin: 30px auto;
-    margin-bottom: 150px; }
-    .testWrap .testListWrap .testList {
-      list-style: none;
-      padding-left: 0; }
-      .testWrap .testListWrap .testList .test {
-        margin-bottom: 10px;
-        font-size: 20px; }
+  padding-top: 35vh; }
+  .testWrap .innerTest {
+    height: 100%; }
+    .testWrap .innerTest .mainQuote {
+      color: white;
+      font-size: 40px;
+      height: 250px;
+      width: 100%;
+      margin: 0 auto 50px auto;
+      font-family: 'Satisfy', cursive;
+      text-align: center; }
+    .testWrap .innerTest .testListWrap {
+      width: 85%;
+      margin: 30px auto;
+      margin-bottom: 150px; }
+      .testWrap .innerTest .testListWrap .testList {
+        list-style: none;
+        padding: 25px 20px 0px 20px;
+        border: 2px solid white; }
+        .testWrap .innerTest .testListWrap .testList .test {
+          margin-bottom: 30px;
+          font-size: 18px;
+          color: white; }
 
+@media (max-width: 500px) {
+  .testWrap .innerTest .mainQuote {
+    margin-top: 20px;
+    font-size: 25px;
+    height: 250px; }
+  .testWrap .innerTest .testListWrap .testList .test {
+    font-size: 12px; } }
 body {
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -192,7 +206,7 @@ header .connect {
     display: list-item;
     font-size: 25px;
     margin-bottom: 20px; }
-    .background .main-nav ul li.store {
+    .background .main-nav ul li.storeNav {
       margin-bottom: 0; }
   .background .connect .glyphicon-envelope {
     font-size: 28px; } }

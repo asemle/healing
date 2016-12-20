@@ -1,4 +1,4 @@
-angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch'])
+angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch', 'ngAnimate'])
 .config(function($urlRouterProvider, $stateProvider, $qProvider) {
   $qProvider.errorOnUnhandledRejections(false);
   $stateProvider.state('home', {

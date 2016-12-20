@@ -1,32 +1,63 @@
 .testWrap {
   margin: 0!important;
-  height: auto;
+  height: 100vh;
+
   width: 100vw;
+  overflow-y: scroll;
   background-color: rgba(255, 255, 255, 0.5);
-  padding-top: 30vh;
+  padding-top: 35vh;
+  .innerTest {
+    height: 100%;
   .mainQuote {
     color: white;
-    font-size: 30px;
-    height: 150px;
-    width: 90%;
-    margin: auto;
+    font-size: 40px;
+    height: 250px;
+    width: 100%;
+    margin: 0 auto 50px auto;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
   }
   .testListWrap {
-    width: 80%;
+    width: 85%;
     margin: 30px auto;
+    margin-bottom: 150px;
     .testList {
       list-style: none;
-      padding-left: 0;
+      padding: 25px 20px 0px 20px;
+      border: 2px solid white;
       .test {
-        margin-bottom: 10px;
-        font-size: 20px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: white;
       }
     }
-    margin-bottom: 150px;
-  }
 
+  }
+}
 }
 
+@media (max-width: 500px) {
+  .testWrap {
+    .innerTest {
+    .mainQuote {
+      margin-top: 20px;
+      font-size: 25px;
+      height: 250px;
+    }
+    .testListWrap {
+
+      .testList {
+
+        .test {
+          font-size: 12px;
+        }
+      }
+
+    }
+}
+
+}
+}
 // <div class="testWrap">
 //     <div class="innerTest container">
 //         <div class="mainQuote">

@@ -22,7 +22,7 @@
           color: red;
         }
       }
-      
+
       h4 {
         text-align: center;
         margin: 20px 0 30px 0;
@@ -80,7 +80,7 @@
 
 @media (max-width: 500px) {
   .connection {
-    height: 677px;
+    height: 100vh;
     overflow: scroll;
     .contact-box {
       .contact-form {

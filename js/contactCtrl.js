@@ -4,4 +4,15 @@ angular.module('healing')
       $('[data-toggle="popover"]').popover();
   });
 
+  $('.connection').bind('scroll', function() {
+     if ($('.connection').scrollTop() > 0) {
+         $('.main-nav').fadeOut();
+         $('.connect').fadeOut();
+     }
+     else {
+         $('.main-nav').show();
+         $('.connect').show();
+     }
+   });
+
 })

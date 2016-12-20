@@ -1,10 +1,20 @@
 angular.module('healing')
 .controller('testimonialsCtrl', function($scope, $interval) {
 
+  $('.testWrap').bind('scroll', function() {
+     if ($('.testWrap').scrollTop() > 0) {
+         $('.main-nav').fadeOut();
+         $('.connect').fadeOut();
+     }
+     else {
+         $('.main-nav').show();
+         $('.connect').show();
+     }
+   });
 
   var testimonials = [
     {
-      quote: "You have helped me tremendously with the Candida and the sinus issues, both decade long problems. It has literally been life changing. I have never felt better physically or emotionally! Yahoo!",
+      quote: "You have helped me tremendously with the Candida and my sinus issues, both decade long problems. It has literally been life changing. I have never felt better physically or emotionally!",
       client: " - Maria M"
     },
     {
@@ -52,6 +62,5 @@ angular.module('healing')
       count += 1;
     }
     $scope.mainTest = testimonials[count]
-    console.log($scope.mainTest)
-  },1000)
+  },10000)
 })
