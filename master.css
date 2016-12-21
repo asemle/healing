@@ -244,9 +244,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 1vh;
+  height: 100vh;
   width: 100%;
-  overflow: scroll;
   position: fixed; }
   body .glyphicon {
     color: white; }
@@ -255,7 +254,7 @@ body {
     body a:hover {
       color: white; }
   body .background {
-    height: 1000px;
+    height: 100vh;
     overflow: scroll; }
 
 header .main-nav {
