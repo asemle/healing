@@ -47,9 +47,9 @@ body {
     .home .glyphicon-chevron-right {
       display: none !important; } }
 .connection {
-  height: 100%;
   margin-top: 100%;
-  animation: slideIn 0.5s 1 forwards; }
+  animation: slideIn 0.5s 1 forwards;
+  margin-bottom: 10%; }
   .connection .contact-box {
     margin-top: 20vh; }
     .connection .contact-box .contact-form {
@@ -61,8 +61,7 @@ body {
       border-radius: 5px;
       padding: 10px;
       position: relative;
-      color: white;
-      margin-bottom: 18%; }
+      color: white; }
       .connection .contact-box .contact-form .glyphicon-remove-circle {
         position: absolute;
         right: 3px;
@@ -117,8 +116,7 @@ body {
   .connection .contact-box {
     margin-top: 30vh; }
     .connection .contact-box .contact-form {
-      width: 90%;
-      margin-bottom: 150px; } }
+      width: 90%; } }
 .testWrap {
   margin: 0 !important;
   height: 100vh;
