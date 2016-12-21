@@ -3,7 +3,7 @@
   margin-top: 100%;
   animation: slideIn 0.5s 1 forwards;
   .contact-box {
-    margin-top: 30vh;
+    margin-top: 20vh;
     .contact-form {
       font-family: 'Roboto Slab', serif;
       width: 70%;
@@ -14,6 +14,7 @@
       padding: 10px;
       position: relative;
       color: white;
+      margin-bottom: 18%;
       .glyphicon-remove-circle {
         position: absolute;
         right: 3px;
@@ -83,11 +84,11 @@
 
 @media (max-width: 500px) {
   .connection {
-    overflow: scroll;
     .contact-box {
+      margin-top: 30vh;
       .contact-form {
         width: 90%;
-        margin-bottom: 20%;
+
       }
     }
   }

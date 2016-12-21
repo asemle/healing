@@ -51,7 +51,7 @@ body {
   margin-top: 100%;
   animation: slideIn 0.5s 1 forwards; }
   .connection .contact-box {
-    margin-top: 30vh; }
+    margin-top: 20vh; }
     .connection .contact-box .contact-form {
       font-family: 'Roboto Slab', serif;
       width: 70%;
@@ -61,7 +61,8 @@ body {
       border-radius: 5px;
       padding: 10px;
       position: relative;
-      color: white; }
+      color: white;
+      margin-bottom: 18%; }
       .connection .contact-box .contact-form .glyphicon-remove-circle {
         position: absolute;
         right: 3px;
@@ -113,11 +114,10 @@ body {
         border-radius: 5px; }
 
 @media (max-width: 500px) {
-  .connection {
-    overflow: scroll; }
+  .connection .contact-box {
+    margin-top: 30vh; }
     .connection .contact-box .contact-form {
-      width: 90%;
-      margin-bottom: 20%; } }
+      width: 90%; } }
 .testWrap {
   margin: 0 !important;
   height: 100vh;
