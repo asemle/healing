@@ -142,9 +142,9 @@ body {
 @keyframes fadeIn {
   0% {
     opacity: 0; }
-  20% {
+  10% {
     opacity: 1; }
-  80% {
+  90% {
     opacity: 1; }
   100% {
     opacity: 0; } }
@@ -182,6 +182,65 @@ body {
     font-size: 20px;
     height: 200px;
     margin-bottom: 20px; } }
+.aboutWrap {
+  margin: 0 !important;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: rgba(192, 192, 192, 0.5);
+  padding-top: 20vh; }
+  .aboutWrap .innerAbout {
+    animation: fadeIn 1s; }
+    .aboutWrap .innerAbout .aboutBox {
+      border: 1px solid white;
+      font-size: 24px;
+      color: white;
+      padding: 30px;
+      margin-bottom: 60px;
+      max-width: 720px;
+      margin: 0 auto 60px;
+      background-color: rgba(255, 255, 255, 0.5); }
+      .aboutWrap .innerAbout .aboutBox .portraitBox {
+        float: left;
+        margin: -30px 40px 30px -30px;
+        border: 1px solid white; }
+        .aboutWrap .innerAbout .aboutBox .portraitBox img {
+          height: 290px;
+          width: 290px; }
+      .aboutWrap .innerAbout .aboutBox p {
+        font-family: "Roboto-Slab", serif; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@media (max-width: 500px) {
+  .aboutWrap {
+    padding-top: 32vh; }
+    .aboutWrap .innerAbout .aboutBox {
+      width: 290px; }
+      .aboutWrap .innerAbout .aboutBox .portraitBox {
+        float: none;
+        margin: 0 auto 30px;
+        background-size: cover;
+        max-width: 290px; }
+        .aboutWrap .innerAbout .aboutBox .portraitBox img {
+          max-width: 100%;
+          height: auto; } }
+.storeWrap {
+  margin: 0 !important;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: rgba(192, 192, 192, 0.5);
+  padding-top: 45vh;
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+  color: white; }
+  .storeWrap h2 {
+    font-size: 50px; }
+
 body {
   background-attachment: fixed;
   background-repeat: no-repeat;

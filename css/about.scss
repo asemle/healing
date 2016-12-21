@@ -1,0 +1,78 @@
+.aboutWrap {
+  margin: 0!important;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: rgba(192,192,192, 0.5);
+  padding-top: 20vh;
+  .innerAbout {
+    animation: fadeIn 1s;
+    .aboutBox {
+      border: 1px solid white;
+      font-size: 24px;
+      color: white;
+      padding: 30px;
+      margin-bottom: 60px;
+      max-width: 720px;
+      margin: 0 auto 60px;
+      background-color: rgba(255, 255, 255, 0.5);
+      .portraitBox {
+        float: left;
+        margin: -30px 40px 30px -30px;
+        border: 1px solid white;
+        img {
+          height: 290px;
+          width: 290px;
+
+        }
+
+      }
+      p {
+        font-family: "Roboto-Slab", serif;
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media(max-width: 500px) {
+  .aboutWrap {
+    padding-top: 32vh;
+    .innerAbout {
+      .aboutBox {
+        width: 290px;
+        .portraitBox {
+          float: none;
+          margin: 0 auto 30px;
+          background-size: cover;
+          max-width: 290px;
+
+          img {
+            max-width: 100%;
+            height: auto;
+
+          }
+  }
+}
+}
+}
+}
+// <div class="aboutWrap">
+//   <div class="innerAbout container">
+//     <div class="aboutBox">
+//       <div class="portraitBox">
+//         <img src="css/media/lisa.JPG" alt="">
+//       </div>
+//       <p>I have been drawn to a path of healing for many years. My former career has been in the food industry, making products that taste good, but are unhealthy. The more I designed these unnatural products, the more my interest in healing grew.<br> We've all had experiences in our past that influence our present state; and not always in positive ways. As a healer I practice methods of releasing this life damage to relieve pain, suffering and anxiety. <br> The body has an amazing ability to heal itself- <br>we only need to give it the tools. </p>
+//     </div>
+//   </div>
+// </div>

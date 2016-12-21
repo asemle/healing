@@ -11,7 +11,8 @@ angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch', 'ngAnimate'])
     controller: 'contactCtrl'
   }).state('about', {
     templateUrl:'./views/about.html',
-    url:'/aboutLisa'
+    url:'/aboutLisa',
+    controller: 'aboutCtrl'
   }).state('testimonials', {
     templateUrl:'./views/testimonials.html',
     url:'/testimonials',
