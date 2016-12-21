@@ -117,7 +117,8 @@ body {
   .connection .contact-box {
     margin-top: 30vh; }
     .connection .contact-box .contact-form {
-      width: 90%; } }
+      width: 90%;
+      margin-bottom: 30px; } }
 .testWrap {
   margin: 0 !important;
   height: 100vh;
