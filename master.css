@@ -138,16 +138,14 @@ body {
       font-family: 'Satisfy', cursive;
       text-align: center;
       opacity: 0;
-      animation: fadeIn 10s infinite; }
+      animation: fadeIn 5s alternate infinite; }
 @keyframes fadeIn {
   0% {
     opacity: 0; }
-  10% {
-    opacity: 1; }
-  90% {
+  20% {
     opacity: 1; }
   100% {
-    opacity: 0; } }
+    opacity: 1; } }
     .testWrap .innerTest .testListWrap {
       width: 85%;
       margin: 30px auto;
