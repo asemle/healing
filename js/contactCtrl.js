@@ -1,6 +1,9 @@
 angular.module('healing')
 .controller('contactCtrl', function($scope) {
-
+  $scope.gotoTop = function() {
+  $('.background').scrollTop(0);
+}
+$scope.gotoTop();
   $(document).ready(function(){
       $('[data-toggle="popover"]').popover();
   });

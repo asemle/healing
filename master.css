@@ -47,7 +47,7 @@ body {
     .home .glyphicon-chevron-right {
       display: none !important; } }
 .connection {
-  height: 100vh;
+  height: 100%;
   margin-top: 100%;
   animation: slideIn 0.5s 1 forwards; }
   .connection .contact-box {
