@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="healing">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <title>Healing with Lisa</title>
+    <link rel="stylesheet" href="master.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Questrial|Roboto+Slab:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Niconne|Satisfy|Yesteryear" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  </head>
+  <body ng-controller='indexCtrl' ng-swipe-left="changeBackgroundLeft()" ng-swipe-right="changeBackgroundRight()" ng-style="backgroundStyle">
+<div class="background">
+<header>
+  <nav class='main-nav'>
+    <ul class>
+      <li class="aboutNav"><a ui-sref="about"><span ng-class="{activeLink: state === 'about'}">About Lisa</span></a><a class="closer aboutCloser" ui-sref="home"><span ng-show="state === 'about'"> x</span></a></li>
+      <li class="testNav"><a ui-sref="testimonials"><span ng-class="{activeLink: state === 'testimonials'}">Testimonials</span></a><a class="closer testCloser" ui-sref="home"><span ng-show="state === 'testimonials'"> x</span></a></li>
+      <li class='storeNav'><a ui-sref="store"><span ng-class="{activeLink: state === 'store'}">For Sale</span></a><a class="closer storeCloser"ui-sref="home"><span ng-show="state === 'store'"> x</span></a></li>
+    </ul>
+  </nav>
+  <div class='connect'>
+    <a ui-sref="contact"><span class="glyphicon glyphicon-envelope"></span></a>
+  </div>
+</header>
+
+
+  <ui-view></ui-view>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js" charset="utf-8"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.0/angular-touch.min.js" charset="utf-8"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js" charset="utf-8"></script>
+<script src="js/app.js"></script>
+<script src="js/indexCtrl.js" charset="utf-8"></script>
+<script src="js/homeCtrl.js" charset="utf-8"></script>
+<script src="js/contactCtrl.js" charset="utf-8"></script>
+<script src="js/testimonialsCtrl.js" charset="utf-8"></script>
+<script src="js/aboutCtrl.js" charset="utf-8"></script>
+<script src="js/contactService.js" charset="utf-8"></script>
+</script>
+  </body>
+</html>

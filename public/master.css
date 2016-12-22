@@ -1,0 +1,320 @@
+body {
+  margin: 0; }
+
+.home {
+  height: 6000px;
+  width: 100%;
+  color: white;
+  text-align: center; }
+  .home .home1 {
+    margin-top: 49vh;
+    text-align: center; }
+    .home .home1 .Q {
+      margin: 0 auto;
+      width: 60%;
+      font-size: 30px;
+      display: none;
+      font-family: 'Roboto Slab', serif;
+      font-weight: 300;
+      position: fixed;
+      top: 48vh;
+      left: 0;
+      right: 0;
+      margin: 0 auto; }
+      .home .home1 .Q a .glyphicon-envelope {
+        position: static;
+        margin-top: 20px;
+        transition: 0.4s color; }
+        .home .home1 .Q a .glyphicon-envelope:hover {
+          font-size: 30px;
+          color: #23527c; }
+    .home .home1 .q1 {
+      display: block; }
+
+.home .glyphicon {
+  position: absolute;
+  top: 50vh;
+  -webkit-transition: font-size 0.5s, height 0.5s;
+  /* Safari */
+  transition: font-size 0.5s, height 0.5s; }
+  .home .glyphicon:hover {
+    font-size: 20px; }
+.home .glyphicon-chevron-left {
+  left: 15px; }
+.home .glyphicon-chevron-right {
+  right: 15px; }
+
+@media (max-width: 500px) {
+  .home {
+    height: 3500px; }
+    .home .home1 .Q {
+      top: 40vh; }
+    .home .glyphicon-chevron-left {
+      display: none !important; }
+    .home .glyphicon-chevron-right {
+      display: none !important; } }
+.connection {
+  margin-top: 100%;
+  animation: slideIn 0.5s 1 forwards;
+  margin-bottom: 10%; }
+  .connection .contact-box {
+    margin-top: 20vh; }
+    .connection .contact-box .contact-form {
+      font-family: 'Roboto Slab', serif;
+      width: 70%;
+      margin: 0 auto;
+      background-color: rgba(255, 255, 255, 0.5);
+      border: 1px solid white;
+      border-radius: 5px;
+      padding: 10px;
+      position: relative;
+      color: white; }
+      .connection .contact-box .contact-form .glyphicon-remove-circle {
+        position: absolute;
+        right: 3px;
+        top: 3px;
+        font-size: 18px;
+        transition: all 0.5s; }
+        .connection .contact-box .contact-form .glyphicon-remove-circle:hover {
+          font-size: 19px;
+          color: red; }
+      .connection .contact-box .contact-form h4 {
+        text-align: center;
+        margin: 20px 0 30px 0;
+        font-size: 19px;
+        color: black;
+        font-family: 'Julius Sans One', sans-serif; }
+      .connection .contact-box .contact-form input {
+        margin-bottom: 20px;
+        color: black; }
+      .connection .contact-box .contact-form .emailHead {
+        display: inline-block;
+        margin-right: 5px; }
+      .connection .contact-box .contact-form .glyphicon-question-sign {
+        font-size: 14px;
+        padding-left: 5px;
+        cursor: help; }
+      .connection .contact-box .contact-form .popover {
+        color: black;
+        font-size: 12px;
+        border: 1px solid #9370DB;
+        background-color: #CEBFEF; }
+        .connection .contact-box .contact-form .popover.arrow {
+          background-color: red; }
+      .connection .contact-box .contact-form .firstName {
+        width: 49%;
+        margin-right: 2%; }
+      .connection .contact-box .contact-form .lastName {
+        width: 49%; }
+      .connection .contact-box .contact-form .emailBox {
+        width: 100%; }
+      .connection .contact-box .contact-form textarea {
+        color: black;
+        width: 100%;
+        height: 80px;
+        margin-bottom: 10px;
+        border: 1px solid #CCCCCC; }
+      .connection .contact-box .contact-form button {
+        width: 100%;
+        text-align: center;
+        border-radius: 5px; }
+
+@media (max-width: 500px) {
+  .connection .contact-box {
+    margin-top: 30vh; }
+    .connection .contact-box .contact-form {
+      width: 90%;
+      margin-bottom: 15%; } }
+.testWrap {
+  margin: 0 !important;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: rgba(192, 192, 192, 0.5);
+  padding-top: 35vh; }
+  .testWrap .innerTest {
+    margin-top: 100%;
+    height: auto;
+    animation: slideIn 0.5s 1 forwards; }
+    .testWrap .innerTest .mainQuote {
+      color: white;
+      font-size: 40px;
+      height: 250px;
+      width: 100%;
+      margin: 0 auto 50px auto;
+      font-family: 'Satisfy', cursive;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 5s alternate infinite; }
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  100% {
+    opacity: 1; } }
+    .testWrap .innerTest .testListWrap {
+      width: 85%;
+      margin: 30px auto;
+      margin-bottom: 150px; }
+      .testWrap .innerTest .testListWrap .testList {
+        list-style: none;
+        padding: 25px 20px 0px 20px;
+        border: 2px solid white;
+        background-color: rgba(255, 255, 255, 0.5); }
+        .testWrap .innerTest .testListWrap .testList .test {
+          margin-bottom: 30px;
+          font-size: 18px;
+          color: white; }
+
+@keyframes slideIn {
+  0% {
+    margin-top: 100%; }
+  100% {
+    margin-top: 0; } }
+@media (max-width: 991px) {
+  .testWrap .innerTest .mainQuote {
+    font-size: 30px; } }
+@media (max-width: 500px) {
+  .testWrap .innerTest .mainQuote {
+    margin-top: 20px;
+    font-size: 25px;
+    height: 250px; }
+  .testWrap .innerTest .testListWrap .testList .test {
+    font-size: 12px; } }
+@media (max-width: 350px) {
+  .testWrap .innerTest .mainQuote {
+    font-size: 20px;
+    height: 200px;
+    margin-bottom: 20px; } }
+.aboutWrap {
+  margin: 0 !important;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: rgba(192, 192, 192, 0.5);
+  padding-top: 20vh; }
+  .aboutWrap .innerAbout {
+    animation: fadeIn 1s;
+    padding-bottom: 50px; }
+    .aboutWrap .innerAbout .aboutBox {
+      border: 1px solid white;
+      font-size: 24px;
+      color: white;
+      padding: 30px;
+      margin-bottom: 60px;
+      max-width: 720px;
+      margin: 0 auto 60px;
+      background-color: rgba(255, 255, 255, 0.5); }
+      .aboutWrap .innerAbout .aboutBox .portraitBox {
+        float: left;
+        margin: -30px 40px 30px -30px;
+        border: 1px solid white; }
+        .aboutWrap .innerAbout .aboutBox .portraitBox img {
+          height: 290px;
+          width: 290px; }
+      .aboutWrap .innerAbout .aboutBox p {
+        font-family: "Roboto-Slab", serif; }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@media (max-width: 500px) {
+  .aboutWrap {
+    padding-top: 32vh; }
+    .aboutWrap .innerAbout .aboutBox {
+      width: 290px; }
+      .aboutWrap .innerAbout .aboutBox .portraitBox {
+        float: none;
+        margin: 0 auto 30px;
+        background-size: cover;
+        max-width: 290px; }
+        .aboutWrap .innerAbout .aboutBox .portraitBox img {
+          max-width: 100%;
+          height: auto; } }
+.storeWrap {
+  margin: 0 !important;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: rgba(192, 192, 192, 0.5);
+  padding-top: 45vh;
+  text-align: center;
+  font-family: 'Satisfy', cursive;
+  color: white; }
+  .storeWrap h2 {
+    font-size: 50px; }
+
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed; }
+  body .glyphicon {
+    color: white; }
+  body a {
+    color: white; }
+    body a:hover {
+      color: white; }
+  body .background {
+    height: 100vh;
+    overflow: scroll; }
+
+header .main-nav {
+  position: fixed;
+  padding: 30px;
+  font-family: "Julius Sans One", sans-serif !important; }
+  header .main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    header .main-nav ul li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 5px; }
+      header .main-nav ul li a {
+        font-size: 22px;
+        line-height: 20px;
+        transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+        transition: 0.3s all; }
+        header .main-nav ul li a:hover {
+          color: #23527c; }
+      header .main-nav ul li .closer {
+        display: inline-block;
+        padding-left: 6px;
+        width: 18px !important;
+        height: 20px !important;
+        color: #23527c; }
+        header .main-nav ul li .closer:hover {
+          text-decoration: none; }
+      header .main-nav ul li .activeLink {
+        color: #23527c;
+        text-decoration: underline; }
+header .connect {
+  top: 0;
+  right: 0;
+  padding: 30px;
+  font-size: 22px;
+  position: fixed; }
+  header .connect .glyphicon-envelope {
+    transition: all 0.5s; }
+    header .connect .glyphicon-envelope:hover {
+      color: #23527c;
+      font-size: 26px; }
+
+@media (max-width: 500px) {
+  .background .main-nav ul li {
+    display: list-item;
+    font-size: 25px;
+    margin-bottom: 20px; }
+    .background .main-nav ul li.storeNav {
+      margin-bottom: 0; }
+  .background .connect .glyphicon-envelope {
+    font-size: 28px; } }
+
+/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+}
+
+@import 'home';
+@import 'contact';
+@import 'testimonials';
+@import 'about';
+@import 'store';
+
+
+body {
+
+  // background-image: url('http://i.imgur.com/AdrfEb2.gif');
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+  position: fixed;
+  .glyphicon {
+    color: white;
+  }
+  a {
+    color: white;
+    &:hover {
+      color: white;
+    }
+  }
+  .background {
+    height: 100vh;
+    overflow: scroll;
+  }
+}
+header {
+
+  // background-image: url('http://static4.businessinsider.com/image/520e788f69bedd084b000006/ibhwzcrdlyu6lg.gif');
+  // background-image: url('http://i.imgur.com/gmuhE5e.gif');
+  // background-image: url('http://i.imgur.com/AdrfEb2.gif');
+
+  .main-nav {
+    position: fixed;
+    padding: 30px;
+  font-family: 'Julius Sans One', sans-serif!important;
+// font-family: 'Satisfy', cursive;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 5px;
+
+        a {
+          font-size: 22px;
+          line-height: 20px;
+          transition: all .35s cubic-bezier(.23,1,.32,1);
+          transition: 0.3s all;
+          &:hover {
+            color: #23527c;
+          }
+          // color: white;
+          // text-transform: uppercase;
+        }
+        .closer {
+          display: inline-block;
+          padding-left: 6px;
+          width: 18px!important;
+          height: 20px!important;
+          color: #23527c;
+          &:hover {
+
+            text-decoration: none;
+          }
+        }
+        .activeLink {
+          color: #23527c;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .connect {
+    top:0;
+    right: 0;
+    padding: 30px;
+    font-size: 22px;
+    position: fixed;
+
+    .glyphicon-envelope {
+      transition: all 0.5s;
+      &:hover {
+      color: #23527c;
+      font-size: 26px;
+    }
+  }
+  }
+}
+@media (max-width: 500px) {
+  .background {
+  .main-nav {
+    ul {
+      li {
+        display: list-item;
+        font-size: 25px;
+        margin-bottom: 20px;
+        &.storeNav {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .connect {
+    .glyphicon-envelope {
+      font-size: 28px;
+    }
+  }
+}
+}
+// <nav class='main-nav'>
+//   <ul class>
+//     <li><a ui-sref="about"></a>About Lisa</li>
+//     <li><a ui-sref="testimonials"></a>Testimonials</li>
+//     <li><a ui-sref="store"></a>For Sale</li>
+//   </ul>
+// </nav>

@@ -1,0 +1,120 @@
+.testWrap {
+  margin: 0!important;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+  background-color: rgba(192,192,192, 0.5);
+  padding-top: 35vh;
+  .innerTest {
+    margin-top: 100%;
+    height: auto;
+    animation: slideIn 0.5s 1 forwards;
+
+  .mainQuote {
+    color: white;
+    font-size: 40px;
+    height: 250px;
+    width: 100%;
+    margin: 0 auto 50px auto;
+    font-family: 'Satisfy', cursive;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 5s alternate infinite;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .testListWrap {
+    width: 85%;
+    margin: 30px auto;
+    margin-bottom: 150px;
+    .testList {
+      list-style: none;
+      padding: 25px 20px 0px 20px;
+      border: 2px solid white;
+      background-color: rgba(255,255,255, 0.5);
+      .test {
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: white;
+      }
+    }
+
+  }
+}
+}
+
+@keyframes slideIn {
+  0% {
+    margin-top: 100%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@media(max-width: 991px) {
+  .testWrap {
+    .innerTest {
+    .mainQuote {
+      font-size: 30px;
+    }
+  }
+}
+}
+
+
+@media (max-width: 500px) {
+  .testWrap {
+    .innerTest {
+    .mainQuote {
+      margin-top: 20px;
+      font-size: 25px;
+      height: 250px;
+    }
+    .testListWrap {
+
+      .testList {
+
+        .test {
+          font-size: 12px;
+        }
+      }
+
+    }
+}
+
+}
+}
+@media (max-width: 350px) {
+  .testWrap {
+    .innerTest {
+    .mainQuote {
+      font-size: 20px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+  }
+  }
+}
+// <div class="testWrap">
+//     <div class="innerTest container">
+//         <div class="mainQuote">
+//             {{mainTest.quote}} {{mainTest.client}}
+//         </div>
+//         <div class="testListWrap">
+//             <ul class='testList'>
+//                 <li class="test" ng-repeat="test in testimonials">
+//                     {{test.quote}} - {{test.client}}
+//                 </li>
+//             </ul>
+//         </div>
+//     </div>
+// </div>
