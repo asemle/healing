@@ -14,7 +14,7 @@ angular.module('healing')
    },
    data: content
  }).then(function(response) {
-   console.log(response)
+   return response
  })
 };
 })

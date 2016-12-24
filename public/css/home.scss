@@ -23,21 +23,23 @@
       left: 0;
       right: 0;
       margin: 0 auto;
-      a {
-      .glyphicon-envelope {
-        position: static;
-        margin-top: 20px;
-        transition: 0.4s color;
-        &:hover {
-          font-size: 30px;
-          color: #23527c;
+      .q9 {
+        display: none;
+        .glyphicon-envelope {
+          position: static;
+          margin-top: 40px;
+          transition: 0.4s color;
+          &:hover {
+            font-size: 30px;
+            color: #23527c;
+          }
         }
       }
-    }
-    }
+      }
     .q1 {
       display: block;
     }
+
   }
 }
 .home {

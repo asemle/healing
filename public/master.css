@@ -21,13 +21,15 @@ body {
       left: 0;
       right: 0;
       margin: 0 auto; }
-      .home .home1 .Q a .glyphicon-envelope {
-        position: static;
-        margin-top: 20px;
-        transition: 0.4s color; }
-        .home .home1 .Q a .glyphicon-envelope:hover {
-          font-size: 30px;
-          color: #23527c; }
+      .home .home1 .Q .q9 {
+        display: none; }
+        .home .home1 .Q .q9 .glyphicon-envelope {
+          position: static;
+          margin-top: 40px;
+          transition: 0.4s color; }
+          .home .home1 .Q .q9 .glyphicon-envelope:hover {
+            font-size: 30px;
+            color: #23527c; }
     .home .home1 .q1 {
       display: block; }
 
@@ -95,12 +97,12 @@ body {
         padding-left: 5px;
         cursor: help; }
       .connection .contact-box .contact-form .popover {
-        color: black;
-        font-size: 12px;
+        color: white;
+        font-size: 14px;
         border: 1px solid #9370DB;
         background-color: #CEBFEF; }
-        .connection .contact-box .contact-form .popover.arrow {
-          background-color: red; }
+        .connection .contact-box .contact-form .popover.right .arrow:after {
+          border-right-color: #CEBFEF; }
       .connection .contact-box .contact-form .firstName {
         width: 49%;
         margin-right: 2%; }
