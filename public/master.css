@@ -7,31 +7,38 @@ body {
   color: white;
   text-align: center; }
   .home .home1 {
-    margin-top: 49vh;
+    width: 100%;
+    padding-top: 30vh;
+    height: 100vh;
     text-align: center; }
-    .home .home1 .Q {
-      margin: 0 auto;
-      width: 60%;
-      font-size: 30px;
-      display: none;
-      font-family: 'Roboto Slab', serif;
-      font-weight: 300;
-      position: fixed;
-      top: 48vh;
-      left: 0;
-      right: 0;
-      margin: 0 auto; }
-      .home .home1 .Q .q9 {
-        display: none; }
-        .home .home1 .Q .q9 .glyphicon-envelope {
-          position: static;
-          margin-top: 40px;
-          transition: 0.4s color; }
-          .home .home1 .Q .q9 .glyphicon-envelope:hover {
-            font-size: 30px;
-            color: #23527c; }
-    .home .home1 .q1 {
-      display: block; }
+    .home .home1 .qc {
+      position: absolute;
+      width: 73%;
+      text-align: justify;
+      left: 13.3%;
+      pointer-events: none; }
+      .home .home1 .qc .Q {
+        margin: 0 auto;
+        font-size: 30px;
+        display: inline;
+        opacity: 0;
+        line-height: 60px;
+        font-family: 'Roboto Slab', serif;
+        font-weight: 300;
+        transition: 2s opacity; }
+        .home .home1 .qc .Q.q9 {
+          display: block;
+          width: 100%;
+          text-align: center; }
+          .home .home1 .qc .Q.q9 .glyphicon-envelope {
+            position: static;
+            margin-top: 10px;
+            transition: 0.4s color; }
+            .home .home1 .qc .Q.q9 .glyphicon-envelope:hover {
+              font-size: 30px;
+              color: #23527c; }
+      .home .home1 .qc .q1 {
+        opacity: 1; }
 
 .home .glyphicon {
   position: absolute;
@@ -46,11 +53,29 @@ body {
 .home .glyphicon-chevron-right {
   right: 15px; }
 
+@media (max-width: 1029px) {
+  .home .home1 .qc .Q {
+    line-height: 50px; }
+    .home .home1 .qc .Q.q9 .glyphicon-envelope {
+      margin-top: 20px; } }
+@media (max-width: 748px) {
+  .home .home1 .qc .Q {
+    font-size: 24px;
+    line-height: auto; }
+    .home .home1 .qc .Q.q9 .glyphicon-envelope {
+      margin-top: 0px; } }
+@media (max-width: 599px) {
+  .home .home1 .qc .Q {
+    font-size: 20px; } }
 @media (max-width: 500px) {
   .home {
-    height: 3500px; }
-    .home .home1 .Q {
-      top: 40vh; }
+    height: 4500px; }
+    .home .home1 .qc .Q {
+      line-height: 22px;
+      top: 40vh;
+      font-size: 20px; }
+      .home .home1 .qc .Q.q9 .glyphicon-envelope {
+        margin-top: 5px; }
     .home .glyphicon-chevron-left {
       display: none !important; }
     .home .glyphicon-chevron-right {
@@ -120,6 +145,20 @@ body {
         width: 100%;
         text-align: center;
         border-radius: 5px; }
+  .connection .messageSent {
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    display: none;
+    margin: 40% auto; }
+    .connection .messageSent p {
+      text-align: center;
+      font-size: 19px;
+      color: black;
+      font-family: 'Julius Sans One', sans-serif;
+      margin: 0; }
 
 @media (max-width: 500px) {
   .connection .contact-box {
@@ -151,7 +190,7 @@ body {
 @keyframes fadeIn {
   0% {
     opacity: 0; }
-  20% {
+  12% {
     opacity: 1; }
   100% {
     opacity: 1; } }
@@ -268,6 +307,7 @@ body {
     overflow: scroll; }
 
 header .main-nav {
+  z-index: 9999;
   position: fixed;
   padding: 30px;
   font-family: "Julius Sans One", sans-serif !important; }
@@ -285,7 +325,30 @@ header .main-nav {
         transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
         transition: 0.3s all; }
         header .main-nav ul li a:hover {
-          color: #23527c; }
+          color: #23527c;
+          text-decoration: none; }
+        header .main-nav ul li a .activeLink {
+          color: #23527c;
+          position: relative;
+          text-decoration: none; }
+          header .main-nav ul li a .activeLink:active {
+            text-decoration: none; }
+          header .main-nav ul li a .activeLink:hover {
+            text-decoration: none; }
+          header .main-nav ul li a .activeLink:after {
+            position: absolute;
+            left: 0;
+            top: 21px;
+            content: "";
+            width: 100%;
+            height: 2px;
+            border-bottom: 2px solid #23527c;
+            animation: slideLine 0.5s forwards; }
+@keyframes slideLine {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
       header .main-nav ul li .closer {
         display: inline-block;
         padding-left: 6px;
@@ -294,9 +357,6 @@ header .main-nav {
         color: #23527c; }
         header .main-nav ul li .closer:hover {
           text-decoration: none; }
-      header .main-nav ul li .activeLink {
-        color: #23527c;
-        text-decoration: underline; }
 header .connect {
   top: 0;
   right: 0;

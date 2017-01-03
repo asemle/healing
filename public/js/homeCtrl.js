@@ -14,69 +14,84 @@ angular.module('healing')
          $('.glyphicon-chevron-right').show();
      }
    });
+   setTimeout(function() {
+      $('.background').focus();
+    }, 300);
    var perc = $('.home').height() * .01;
    $('.background').bind('scroll', function() {
      if ($('.background').scrollTop() < perc * 2) {
-         $('.q1').show();
+         $('.q1').css("opacity", "1");
      }
-      if ($('.background').scrollTop() > perc * 2) {
-          $('.q1').fadeOut();
+      if ($('.background').scrollTop() > perc * 6) {
+          $('.q1').css("opacity", "0.1")
       }
       //q2
-      if ($('.background').scrollTop() > perc * 5 && $('.background').scrollTop() < perc * 14) {
-          $('.q2').fadeIn();
+      if ($('.background').scrollTop() > perc * 3 && $('.background').scrollTop() < perc * 14) {
+          $('.q2').css("opacity", "1")
       }
       else {
-          $('.q2').fadeOut();
+          $('.q2').css("opacity", "0.1")
       }
       //q3
-      if ($('.background').scrollTop() > perc * 17 && $('.background').scrollTop() < perc * 25) {
-          $('.q3').fadeIn();
+      if ($('.background').scrollTop() > perc * 7 && $('.background').scrollTop() < perc * 30) {
+          $('.q3').css("opacity", "1")
       }
       else {
-          $('.q3').fadeOut();
+          $('.q3').css("opacity", "0.1")
       }
       //q4
-      if ($('.background').scrollTop() > perc * 28 && $('.background').scrollTop() < perc * 37) {
-          $('.q4').fadeIn();
+      if ($('.background').scrollTop() > perc * 24 && $('.background').scrollTop() < perc * 44) {
+          $('.q4').css("opacity", "1")
       }
       else {
-          $('.q4').fadeOut();
+          $('.q4').css("opacity", "0.1")
       }
       //q5
-      if ($('.background').scrollTop() > perc * 39 && $('.background').scrollTop() < perc * 47) {
-          $('.q5').fadeIn();
+      if ($('.background').scrollTop() > perc * 32 && $('.background').scrollTop() < perc * 56) {
+          $('.q5').css("opacity", "1")
       }
       else {
-          $('.q5').fadeOut();
+          $('.q5').css("opacity", "0.1")
       }
       //q6
-      if ($('.background').scrollTop() > perc * 50 && $('.background').scrollTop() < perc * 58) {
-          $('.q6').fadeIn();
+      if ($('.background').scrollTop() > perc * 40 && $('.background').scrollTop() < perc * 66) {
+          $('.q6').css("opacity", "1")
       }
       else {
-          $('.q6').fadeOut();
+          $('.q6').css("opacity", "0.1")
       }
       //q7
-      if ($('.background').scrollTop() > perc * 60 && $('.background').scrollTop() < perc * 71) {
-            $('.q7').fadeIn();
+      if ($('.background').scrollTop() > perc * 52 && $('.background').scrollTop() < perc * 78) {
+            $('.q7').css("opacity", "1")
       }
       else {
-          $('.q7').fadeOut();
+          $('.q7').css("opacity", "0.1")
       }
         //q8
-      if ($('.background').scrollTop() > perc * 71 && $('.background').scrollTop() <= perc * 100) {
-          $('.q8').fadeIn(1400);
+      if ($('.background').scrollTop() > perc * 70 && $('.background').scrollTop() < perc * 84) {
+          $('.q8').css("opacity", "1")
       }
       else {
-          $('.q8').fadeOut();
+          $('.q8').css("opacity", "0.1")
       }
-      if ($('.background').scrollTop() > perc * 87 && $('.background').scrollTop() <= perc * 100) {
-          $('.q9').fadeIn("slow");
+      if ($('.background').scrollTop() > perc * 84 && $('.background').scrollTop() <= perc * 100) {
+          $('.q9').css("opacity", "1");
       }
-      else {
-          $('.q9').fadeOut();
+      // else {
+      //   $('.q9').css("opacity", "0")
+      // }
+      if ($('.background').scrollTop() >= perc * 88) {
+        $('.q1').css("opacity", "0.5")
+        $('.q2').css("opacity", "0.5")
+        $('.q3').css("opacity", "0.5")
+        $('.q4').css("opacity", "0.5")
+        $('.q5').css("opacity", "0.5")
+        $('.q6').css("opacity", "0.5")
+        $('.q7').css("opacity", "0.5")
+        $('.q8').css("opacity", "1")
+        $('.q9').css("opacity", "1");
       }
+
     });
 
     //   var vh = $('.background').height()/100;

@@ -15,7 +15,7 @@ $scope.submit = function() {
       $('.lastName').val('')
       $('.emailBox').val('')
       $('.comment').val('')
-      $('.contact-form').fadeIn("slow");
+      $('.messageSent').fadeIn("slow");
 
     })
   })

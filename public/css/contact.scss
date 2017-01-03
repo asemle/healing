@@ -80,6 +80,22 @@
       }
     }
   }
+  .messageSent {
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+    display: none;
+    margin: 40% auto;
+    p {
+    text-align: center;
+    font-size: 19px;
+    color: black;
+    font-family: 'Julius Sans One', sans-serif;
+    margin: 0;
+    }
+  }
 }
 
 

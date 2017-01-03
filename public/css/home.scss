@@ -3,31 +3,49 @@
   width: 100%;
   color: white;
   text-align: center;
+  // overflow: scroll;
 
   .home1 {
-    margin-top: 49vh;
-    text-align: center;
+    width: 100%;
+    padding-top: 30vh;
+    height: 100vh;
+  text-align: center;
+
+    // position: fixed;
+    // margin-right: 7vw;
+    // position: fixed;
+    // text-align: center;
     // font-family: 'Roboto Slab', serif;
     // font-family: 'Questrial', sans-serif;
     // font-family: 'Julius Sans One', sans-serif;
-
+    .qc {
+      position: absolute;
+      width: 73%;
+      text-align: justify;
+      left: 13.3%;
+      pointer-events: none;
     .Q {
       margin: 0 auto;
-      width: 60%;
+      // width: 60%;
       font-size: 30px;
-      display: none;
+      display: inline;
+      opacity: 0;
+      line-height: 60px;
       font-family: 'Roboto Slab', serif;
       font-weight: 300;
-      position: fixed;
-      top: 48vh;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      .q9 {
-        display: none;
+      transition: 2s opacity;
+      // position: fixed;
+      // top: 48vh;
+      // left: 0;
+      // right: 0;
+      // margin: 0 auto;
+      &.q9 {
+        display: block;
+        width: 100%;
+        text-align: center;
         .glyphicon-envelope {
           position: static;
-          margin-top: 40px;
+          margin-top: 10px;
           transition: 0.4s color;
           &:hover {
             font-size: 30px;
@@ -37,9 +55,9 @@
       }
       }
     .q1 {
-      display: block;
+      opacity: 1;
     }
-
+  }
   }
 }
 .home {
@@ -63,13 +81,73 @@
   right:15px;
 }
 }
+
+@media (max-width: 1029px) {
+  .home {
+    .home1 {
+      .qc {
+      .Q {
+        line-height: 50px;
+        &.q9 {
+          .glyphicon-envelope {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+    }
+  }
+}
+
+@media (max-width:748px) {
+  .home {
+    .home1 {
+      .qc {
+      .Q {
+        font-size: 24px;
+        line-height: auto;
+        &.q9 {
+          .glyphicon-envelope {
+            margin-top: 0px;
+          }
+        }
+      }
+    }
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .home {
+    .home1 {
+      .qc {
+      .Q {
+        font-size: 20px;
+        &.q9 {
+          .glyphicon-envelope {
+          }
+        }
+      }
+    }
+    }
+  }
+}
 @media(max-width: 500px) {
   .home {
-    height: 3500px;
+    height: 4500px;
     .home1 {
+      .qc {
       .Q {
+        line-height: 22px;
         top: 40vh;
+        font-size: 20px;
+        &.q9 {
+          .glyphicon-envelope {
+            margin-top: 5px;
+          }
+        }
       }
+    }
     }
 
   .glyphicon-chevron-left {
