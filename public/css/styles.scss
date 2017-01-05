@@ -7,7 +7,8 @@ body {
 @import 'testimonials';
 @import 'about';
 @import 'store';
-
+@import 'login';
+@import 'statements';
 
 body {
 
@@ -35,14 +36,28 @@ body {
   }
 }
 header {
-
+  min-height: 100px;
+  border-bottom: 1px solid #8B668B;
+  border-right: 1px solid #8B668B;
+  border-left: 1px solid #8B668B;
+  position: fixed;
+  width: 100%;
+  &:after {
+      content: "";
+      width: 100%;
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 100px;
+      border: 1px solid white;
+    }
   // background-image: url('http://static4.businessinsider.com/image/520e788f69bedd084b000006/ibhwzcrdlyu6lg.gif');
   // background-image: url('http://i.imgur.com/gmuhE5e.gif');
   // background-image: url('http://i.imgur.com/AdrfEb2.gif');
 
   .main-nav {
     z-index: 9999;
-    position: fixed;
+
     padding: 30px;
   font-family: 'Julius Sans One', sans-serif!important;
 // font-family: 'Satisfy', cursive;
@@ -110,6 +125,8 @@ header {
       }
     }
   }
+
+
   .connect {
     top:0;
     right: 0;
@@ -125,20 +142,41 @@ header {
     }
   }
   }
+  .loginLink {
+    position: fixed;
+    top: 0;
+    font-size: 22px;
+    right: 50px;
+    padding: 30px;
+    opacity: 0;
+    transition: all 10s;
+    &:hover {
+      opacity: 1;
+    }
+    .glyphicon-th-large {
+
+    }
+  }
 }
 @media (max-width: 500px) {
   .background {
-  .main-nav {
-    ul {
-      li {
-        display: list-item;
-        font-size: 25px;
-        margin-bottom: 20px;
-        &.storeNav {
-          margin-bottom: 0;
+    header {
+      height: 205px;
+      &:after {
+          top: 205px;
+        }
+      .main-nav {
+        ul {
+          li {
+            display: list-item;
+            font-size: 25px;
+              margin-bottom: 20px;
+            &.storeNav {
+            margin-bottom: 0;
         }
       }
     }
+  }
   }
   .connect {
     .glyphicon-envelope {

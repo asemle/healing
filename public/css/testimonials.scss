@@ -1,10 +1,11 @@
 .testWrap {
-  margin: 0!important;
-  height: 100vh;
+  margin: 0;
+  height: auto;
   width: 100vw;
-  overflow-y: scroll;
   background-color: rgba(192,192,192, 0.5);
-  padding-top: 35vh;
+  margin-top: 100px;
+  border: 1px solid white;
+  padding-top: 60px;
   .innerTest {
     margin-top: 100%;
     height: auto;
@@ -15,7 +16,7 @@
     font-size: 40px;
     height: 250px;
     width: 100%;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 0px auto;
     font-family: 'Satisfy', cursive;
     text-align: center;
     opacity: 0;
@@ -65,6 +66,7 @@
     .innerTest {
     .mainQuote {
       font-size: 30px;
+      height: 200px;
     }
   }
 }
@@ -73,11 +75,12 @@
 
 @media (max-width: 500px) {
   .testWrap {
+    margin-top: 205px;
     .innerTest {
     .mainQuote {
       margin-top: 20px;
       font-size: 25px;
-      height: 250px;
+      height: 200px;
     }
     .testListWrap {
 

@@ -9,7 +9,7 @@
     width: 100%;
     padding-top: 30vh;
     height: 100vh;
-  text-align: center;
+    text-align: center;
 
     // position: fixed;
     // margin-right: 7vw;
@@ -44,6 +44,7 @@
         width: 100%;
         text-align: center;
         .glyphicon-envelope {
+          pointer-events: auto;
           position: static;
           margin-top: 10px;
           transition: 0.4s color;
@@ -136,11 +137,12 @@
   .home {
     height: 4500px;
     .home1 {
+      padding-top: 260px;
       .qc {
       .Q {
         line-height: 22px;
         top: 40vh;
-        font-size: 20px;
+        font-size: 22px;
         &.q9 {
           .glyphicon-envelope {
             margin-top: 5px;

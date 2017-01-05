@@ -1,16 +1,23 @@
 angular.module('healing')
 .controller('testimonialsCtrl', function($scope, $interval) {
 
-  $('.testWrap').bind('scroll', function() {
-     if ($('.testWrap').scrollTop() > 0) {
-         $('.main-nav').fadeOut();
-         $('.connect').fadeOut();
-     }
-     else {
-         $('.main-nav').show();
-         $('.connect').show();
-     }
-   });
+  // $('.testWrap').bind('scroll', function() {
+  //    if ($('.testWrap').scrollTop() > 0) {
+  //        $('header').fadeOut();
+  //    }
+  //    else {
+  //        $('header').show();
+  //    }
+  //  });
+
+   $('.background').bind('scroll', function() {
+      if ($('.background').scrollTop() > 0) {
+          $('header').fadeOut();
+      }
+      else {
+          $('header').show();
+      }
+    });
 
   var testimonials = [
     {

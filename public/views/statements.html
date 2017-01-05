@@ -1,0 +1,21 @@
+<div class="paymentsWrap" ng-swipe-left=null ng-swipe-right=null>
+  <div class="container">
+    <table class=paymentsTable>
+      <tr ng-repeat="payment in payments">
+        <td id="id">{{payment.id}}</td>
+        <td id="date">{{payment.date | date : "medium"}}</td>
+        <td id="sender">{{payment.sender}}</td>
+        <td id="amount">{{payment.amount}}</td>
+        <td id="description">{{payment.description}}</td>
+        <td id="deleteRow"><span class="glyphicon glyphicon-remove-circle" ng-dblclick="deletePayment(payment.id)"></span></td>
+      </tr>
+    </table>
+    <div class="addPaymentBox">
+      <input id="addDate" type="datetime-local" placeholder="date" ng-model="date">
+      <input id="addSender" type="text" placeholder="from" ng-model="sender">
+      <input id="addAmount" type="number" placeholder="amount" ng-model="amount">
+      <input id="addDescr" type="text" placeholder="description" ng-model="description">
+      <input type="submit" ng-click="addPayment()" value="add">
+    </div>
+  </div>
+</div>

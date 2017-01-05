@@ -1,13 +1,11 @@
 angular.module('healing')
 .controller('aboutCtrl', function($scope) {
-  $('.aboutWrap').bind('scroll', function() {
-     if ($('.aboutWrap').scrollTop() > 0) {
-         $('.main-nav').fadeOut('fast');
-         $('.connect').fadeOut('fast');
+  $('.background').bind('scroll', function() {
+     if ($('.background').scrollTop() > 0) {
+         $('header').fadeOut('fast');
      }
      else {
-         $('.main-nav').show();
-         $('.connect').show();
+         $('header').show();
      }
    });
 })

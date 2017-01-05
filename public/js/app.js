@@ -20,6 +20,17 @@ angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch', 'ngAnimate'])
   }).state('store', {
     templateUrl:'./views/store.html',
     url:'/store'
+  }).state('login', {
+    templateUrl:'./views/login.html',
+    url:'/login',
+    controller: 'loginCtrl'
+  }).state('statements', {
+    templateUrl:'./views/statements.html',
+    url:'/statements',
+    controller: 'statementsCtrl'
+    // resolve: {
+    //
+    // }
   })
   $urlRouterProvider.otherwise('/');
 })

@@ -1,0 +1,63 @@
+.paymentsWrap {
+    margin: 0;
+    height: auto;
+    width: 100vw;
+    background-color: rgba(192,192,192, 0.5);
+    margin-top: 100px;
+    border: 1px solid white;
+    background-color: rgba(255,255,255, 0.5);
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    color: black;
+
+    .paymentsTable {
+        width: 100%;
+    }
+
+    .paymentsTable,
+    td,
+    th {
+        border: 1px solid grey;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    table tr:nth-child(odd) {
+        background-color: #f1f1f1;
+    }
+
+    table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
+    #amount {
+      width: 100px;
+    }
+    #date {
+      width: 210px;
+    }
+    .addPaymentBox {
+      text-align: right;
+      margin-top: 10px;
+    }
+    #addAmount {
+      width: 100px;
+    }
+    #addDate {
+      width: 210px;
+    }
+    #deleteRow {
+      width: 31px;
+    }
+    .glyphicon-remove-circle {
+      color: darkgrey;
+      &:hover {
+        color: red;
+      }
+    }
+}
+@media (max-width: 500px) {
+    .paymentsWrap {
+        margin-top: 205px;
+    }
+}

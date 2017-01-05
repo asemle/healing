@@ -9,8 +9,8 @@ angular.module('healing')
    method: 'POST',
    url: '/contacted',
    headers: {
-       'Content-Type': 'application/json', /*or whatever type is relevant */
-       'Accept': 'application/json' /* ditto */
+       'Content-Type': 'application/json', 
+       'Accept': 'application/json'
    },
    data: content
  }).then(function(response) {

@@ -58,12 +58,10 @@ $scope.gotoTop();
 
   $('.background').bind('scroll', function() {
      if ($('.background').scrollTop() > 0) {
-         $('.main-nav').fadeOut();
-         $('.connect').fadeOut();
+         $('header').fadeOut();
      }
      else {
-         $('.main-nav').show();
-         $('.connect').show();
+         $('header').show();
      }
    });
 

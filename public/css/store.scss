@@ -1,16 +1,27 @@
 .storeWrap {
   margin: 0;
-  height: 85vh;
+  height: 100%;
   width: 100vw;
   overflow-y: scroll;
   background-color: rgba(192,192,192, 0.5);
-  margin-top: 15vh;
-  border: 2px solid white;
-  background-color: rgba(255,255,255, 0.5);
+  margin-top: 100px;
+  border: 1px solid white;
+  // border-top: 1px solid #8B668B;
+  background-color: rgba(192, 192, 192, 0.5);
   text-align: center;
   // font-family: 'Satisfy', cursive;
   padding-top: 30px;
   color: white;
+  position: relative;
+  // &:before {
+  //   content: "";
+  //   width: 100%;
+  //   display: block;
+  //   position: absolute;
+  //   z-index: 1;
+  //   top: -1px;
+  //   border: 1px solid white;
+  // }
   h2 {
     font-family: arial, sans-serif;
     font-size: 40px;
@@ -23,7 +34,10 @@
 
 @media (max-width: 500px) {
   .storeWrap {
-    margin-top: 30vh;
+    margin-top: 205px;
+    h2 {
+      font-size: 30px;
+    }
   }
 }
 
