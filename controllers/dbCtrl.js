@@ -26,7 +26,8 @@ module.exports = {
     })
   },
   addPayment: function(req, res) {
-    db.add_payment([req.body.sender, req.body.amount, req.body.date, req.body.description], function(err, response) {
+    if(req.body.date !== undefined) {
+      db.add_payment([req.body.sender, req.body.amount, req.body.date, req.body.description], function(err, response) {
       if(!err) {
         db.get_payments(function(err, payments) {
           res.status(200).send(payments)
@@ -35,6 +36,17 @@ module.exports = {
         res.status(422).send(err)
       }
     })
+  } else {
+    db.add_paymentdl([req.body.sender, req.body.amount, req.body.description], function(err, response) {
+      if(!err) {
+        db.get_payments(function(err, payments) {
+          res.status(200).send(payments)
+        })
+      } else {
+        res.status(422).send(err)
+      }
+    })
+  }
   },
   deletePayment: function(req, res) {
     db.delete_payment([req.params.id], function(err, response) {

@@ -13,7 +13,6 @@ angular.module("healing")
     })
   }
   this.deletePayment = function(id) {
-    console.log(id);
     return $http.delete('/payments/'+ id)
     .then(function(response) {
       return response;

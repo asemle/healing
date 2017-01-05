@@ -2,7 +2,6 @@ angular.module("healing")
 .controller('statementsCtrl', function($scope, statementsService, $filter) {
   statementsService.getPayments()
   .then(function(response) {
-    console.log(response.data)
     $scope.payments = response.data
   })
 
@@ -14,11 +13,10 @@ angular.module("healing")
          $('header').show();
      }
    });
-   
+
   $scope.addPayment = function() {
 
     var date = $filter('date')($scope.date, 'yyyy-MM-dd HH:mm:ss', 'EST')
-    console.log($scope.date, $scope.amount, $scope.sender, $scope.description)
 
     var req = {
       "sender": $scope.sender,
@@ -28,7 +26,6 @@ angular.module("healing")
     }
     statementsService.addPayment(req)
       .then(function(response) {
-        console.log(response.data)
         $scope.payments = response.data
         $scope.sender = undefined;
         $scope.amount = undefined;
@@ -38,9 +35,6 @@ angular.module("healing")
       })
     }
     $scope.deletePayment = function(id) {
-      // var req = {
-      //   "id":id
-      // }
       statementsService.deletePayment(id)
       .then(function(response) {
         $scope.payments = response.data;
