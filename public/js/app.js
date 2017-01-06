@@ -19,18 +19,33 @@ angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch', 'ngAnimate'])
     controller: 'testimonialsCtrl'
   }).state('store', {
     templateUrl:'./views/store.html',
-    url:'/store'
+    url:'/store',
+    controller: 'storeCtrl'
   }).state('login', {
     templateUrl:'./views/login.html',
     url:'/login',
     controller: 'loginCtrl'
+  }).state('pay', {
+    templateUrl:'/views/pay.html',
+    url:'/pay',
+    controller: 'payCtrl'
   }).state('statements', {
     templateUrl:'./views/statements.html',
     url:'/statements',
-    controller: 'statementsCtrl'
-    // resolve: {
-    //
-    // }
+    controller: 'statementsCtrl',
+    resolve: {
+      security: (statementsService, $state) => {
+        return statementsService.getAuth()
+          .catch((err) => {
+            console.log("Unauthorized: ", err);
+            if( err.status === 401) {
+              $state.go('login')
+            } else if (err.status === 403) {
+              $state.go('home')
+            }
+          });
+      }
+    }
   })
   $urlRouterProvider.otherwise('/');
 })

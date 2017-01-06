@@ -12,7 +12,7 @@ var conn = massive.connectSync({
     connectionString: "postgres://postgres@localhost/healing"
 })
 
-
+// stripe.setPublishableKey('pk_test_kVcN290woepedGKOFhaRWZyp');
 
 var cors = require('cors');
 
@@ -63,6 +63,8 @@ app.delete('/payments/:id', dbCtrl.deletePayment);
 app.post('/api/login', passport.authenticate('local'), function(req, res) {
   res.status(200).send();
 });
+
+app.get('/userauth', dbCtrl.getAuth);;
 
 app.listen(port, function() {
   console.log('listening on ' + port)

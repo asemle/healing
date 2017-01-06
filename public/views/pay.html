@@ -1,0 +1,62 @@
+<div class="payWrap">
+    <form action="/your-charge-code" method="POST" id="payment-form">
+        <span class="payment-errors"></span>
+
+
+        <div class="form-row">
+          <label>
+            <span class="inputName">Email</span>
+            <input class="inputColumn" type="text" size="25">
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span class="inputName">Name</span>
+            <input class="inputColumn" type="text" size="25">
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span class="inputName">Amount</span>
+            <input class="inputColumn" type="number" size="7" data-stripe="number" ng-model="amount" required>
+          </label>
+        </div>
+
+        <div class="form-row">
+          <label>
+            <span id="for" class="inputName">For</span>
+            <textarea class="inputColumn" form="payment-form" rows="5" cols="27" placeholder="Include shipping address here, if applicable." ng-model="description"></textarea>
+          </label>
+        </div>
+
+
+    <div class="form-row">
+      <label>
+        <span class="inputName">Card Number</span>
+        <input type="text" size="20" maxlength="16" class="inputColumn" data-stripe="number" required>
+      </label>
+    </div>
+
+
+        <div class="form-row">
+            <label>
+              <span class="inputName">Expiration</span>
+              <input type="text" size="2" class="expDate" data-stripe="exp_month" placeholder="MM"required>
+            </label>
+
+            <span> / </span>
+            <input type="text" class="expDate" size="2" data-stripe="exp_year" placeholder="YY" required>
+
+            <label>
+              <span class="inputName code">CVC</span>
+              <input type="number" class="code" maxlength="4" size="4" placeholder="XXX" data-stripe="c  vc" required>
+            </label>
+        </div>
+
+        <div class="form-row">
+
+        </div>
+        <input id="sendButton" type="submit" class="submit" value="Send {{amount | currency}}">
+    </form>
+</div>

@@ -58,5 +58,17 @@ module.exports = {
         res.status(422).send(err)
       }
     })
+  },
+  getAuth: function(req, res, next) {
+    console.log("server getting auth");
+    if(!req.user) {
+      res.status(401).send('please login');
+      return;
+    }
+    if(req.user.id !== 1 && req.user.id !== 2) {
+      res.status(403).send('Unauthorized');
+      return;
+    }
+    res.status(200).send('');
   }
 }

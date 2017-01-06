@@ -287,7 +287,7 @@ body {
           height: auto; } }
 .storeWrap {
   margin: 0;
-  height: 100%;
+  min-height: 603px;
   width: 100vw;
   overflow-y: scroll;
   background-color: rgba(192, 192, 192, 0.5);
@@ -295,20 +295,52 @@ body {
   border: 1px solid white;
   background-color: rgba(192, 192, 192, 0.5);
   text-align: center;
-  padding-top: 30px;
+  padding-top: 60px;
   color: white;
-  position: relative; }
+  position: relative;
+  z-index: 500; }
+  .storeWrap .innerStore {
+    z-index: 500;
+    width: 64%;
+    border: 2px solid whitesmoke;
+    padding: 15px;
+    margin: 0 auto;
+    background-color: rgba(192, 192, 192, 0.7); }
   .storeWrap h2 {
-    font-family: arial, sans-serif;
+    color: black;
+    font-family: 'Julius Sans One', sans-serif;
     font-size: 40px;
     margin: auto;
-    width: 70%; }
+    text-align: left;
+    margin-bottom: 40px; }
+  .storeWrap input {
+    margin-bottom: 30px;
+    color: black;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 16px;
+    background-color: #F6F6F6;
+    border-color: white;
+    border-width: medium;
+    transition: 0.2s all; }
+    .storeWrap input:hover {
+      box-shadow: 1px 0px 25px whitesmoke;
+      border-style: double; }
+    .storeWrap input:focus {
+      outline: none; }
 
+@media (max-width: 803px) {
+  .storeWrap h2 {
+    font-size: 35px; } }
 @media (max-width: 500px) {
   .storeWrap {
     margin-top: 205px; }
     .storeWrap h2 {
-      font-size: 30px; } }
+      font-size: 25px; } }
+@media (max-width: 407px) {
+  .storeWrap {
+    margin-top: 205px; }
+    .storeWrap h2 {
+      font-size: 24px; } }
 .loginBox {
   text-align: center;
   margin: 45vh auto 0 auto; }
@@ -358,6 +390,56 @@ body {
 @media (max-width: 500px) {
   .paymentsWrap {
     margin-top: 205px; } }
+.payWrap {
+  margin-top: 100px;
+  padding-top: 70px;
+  background-color: rgba(192, 192, 192, 0.5);
+  border: 1px solid white;
+  min-height: 603px;
+  width: 100vw; }
+  .payWrap #payment-form {
+    width: 360px;
+    margin: 0 auto;
+    border: 2px inset white;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(192, 192, 192, 0.7); }
+  .payWrap .form-row {
+    margin-bottom: 20px; }
+    .payWrap .form-row .inputName {
+      display: inline-block;
+      width: 100px;
+      text-align: right; }
+      .payWrap .form-row .inputName#for {
+        float: left;
+        height: 106px;
+        margin-right: 4px; }
+    .payWrap .form-row .inputColumn {
+      width: 238px; }
+  .payWrap .code {
+    text-align: center;
+    width: 40px; }
+    .payWrap .code::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0; }
+  .payWrap .expDate {
+    width: 34px;
+    text-align: center;
+    font-weight: bold; }
+  .payWrap #sendButton {
+    display: block;
+    margin: 0 auto; }
+
+@media (max-width: 500px) {
+  .payWrap {
+    margin-top: 205px;
+    padding-top: 10px;
+    min-height: 500px; }
+    .payWrap #payment-form {
+      width: 310px;
+      font-size: 10px; }
+    .payWrap .form-row .inputName {
+      width: 50px; } }
 body {
   background-attachment: fixed;
   background-repeat: no-repeat;

@@ -18,4 +18,13 @@ angular.module("healing")
       return response;
     })
   }
+  this.getAuth = function() {
+    console.log('service getting auth');
+    return $http({
+      method: 'GET',
+      url: '/userauth'
+    }).then(function(response) {
+      return response;
+    })
+  }
 })
