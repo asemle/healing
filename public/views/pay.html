@@ -1,8 +1,19 @@
 <div class="payWrap">
-    <form action="/your-charge-code" method="POST" id="payment-form">
+    <form action="/stripe" method="POST" id="payment-form">
+      <div class="lotusBox">
+        <div class="vase">
+          <!-- <img src="../css/media/lotus.png" alt=""> -->
+        </div>
+      </div>
+      <span class="glyphicon glyphicon-remove-circle" ng-click="$('.background').scrollTop(0);" ui-sref="home"></span>
         <span class="payment-errors"></span>
 
-
+        <div class="form-row">
+          <label>
+            <span class="inputName">Name</span>
+            <input class="inputColumn" ng-model="newSender" type="text" size="25">
+          </label>
+        </div>
         <div class="form-row">
           <label>
             <span class="inputName">Email</span>
@@ -11,22 +22,15 @@
         </div>
         <div class="form-row">
           <label>
-            <span class="inputName">Name</span>
-            <input class="inputColumn" type="text" size="25">
-          </label>
-        </div>
-
-        <div class="form-row">
-          <label>
             <span class="inputName">Amount</span>
-            <input class="inputColumn" type="number" size="7" data-stripe="number" ng-model="amount" required>
+            <input class="inputColumn" type="number" ng-model="newAmount" size="7" data-stripe="number" ng-model="amount" required>
           </label>
         </div>
 
         <div class="form-row">
           <label>
             <span id="for" class="inputName">For</span>
-            <textarea class="inputColumn" form="payment-form" rows="5" cols="27" placeholder="Include shipping address here, if applicable." ng-model="description"></textarea>
+            <textarea class="inputColumn" form="payment-form" ng-model="newDescr" rows="5" cols="27" placeholder="Include shipping address here, if applicable." ng-model="description"></textarea>
           </label>
         </div>
 
@@ -42,21 +46,21 @@
         <div class="form-row">
             <label>
               <span class="inputName">Expiration</span>
-              <input type="text" size="2" class="expDate" data-stripe="exp_month" placeholder="MM"required>
+              <input type="text" size="2" ng-minlength="2" ng-maxlength="2" maxlength="2" min="1" max="12" class="expDate cc" data-stripe="exp_month" placeholder="MM"required>
             </label>
 
             <span> / </span>
-            <input type="text" class="expDate" size="2" data-stripe="exp_year" placeholder="YY" required>
+            <input type="text" class="expDate cc" ng-minlength="2" ng-maxlength="2" min="1" max="31" size="2" data-stripe="exp_year" placeholder="YY" required>
 
             <label>
               <span class="inputName code">CVC</span>
-              <input type="number" class="code" maxlength="4" size="4" placeholder="XXX" data-stripe="c  vc" required>
+              <input type="number" class="code cc" ng-minlength="3" ng-maxlength="4" min="0000" max="9999" size="4" placeholder="XXX" data-stripe="c  vc" required>
             </label>
         </div>
 
         <div class="form-row">
 
         </div>
-        <input id="sendButton" type="submit" class="submit" value="Send {{amount | currency}}">
+        <input id="sendButton" type="submit" class="submit" value="Send {{newAmount | currency}}">
     </form>
 </div>

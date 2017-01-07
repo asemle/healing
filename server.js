@@ -28,6 +28,8 @@ app.use(cors());
 app.use(session({ secret: config.sessionSecret }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.post
+
 
 var mailSend = require('./controllers/emailCtrl.js');
 var dbCtrl = require('./controllers/dbCtrl.js');
