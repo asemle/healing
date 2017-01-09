@@ -1,3 +1,3 @@
 INSERT INTO PAYMENTS
-(sender, amount, description)
-VALUES ($1, $2, $3);
+(sender, amount, description, email, token)
+VALUES ($1, $2, $3, $4, $5);

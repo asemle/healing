@@ -307,8 +307,8 @@ body {
     margin: 0 auto;
     background-color: rgba(192, 192, 192, 0.7); }
   .storeWrap h2 {
-    color: black;
-    font-family: 'Julius Sans One', sans-serif;
+    color: white;
+    font-family: 'Arial', sans-serif;
     font-size: 40px;
     margin: auto;
     text-align: left;
@@ -323,7 +323,7 @@ body {
     border-width: medium;
     transition: 0.2s all; }
     .storeWrap input:hover {
-      box-shadow: 1px 0px 25px whitesmoke;
+      box-shadow: 1px 0px 10px whitesmoke;
       border-style: double; }
     .storeWrap input:focus {
       outline: none; }
@@ -408,22 +408,6 @@ body {
     border-radius: 10px;
     background-color: rgba(245, 245, 247, 0.7);
     position: relative; }
-  .payWrap .lotusBox {
-    position: absolute;
-    top: -30px;
-    margin: auto;
-    right: 40%;
-    left: 40%; }
-    .payWrap .lotusBox .vase {
-      width: 50px;
-      height: 50px;
-      background-image: url("../css/media/lotus.png");
-      background-size: cover;
-      background-position: center center;
-      border: 4px solid white;
-      border-radius: 100%;
-      text-align: center;
-      position: relative; }
   .payWrap .glyphicon {
     position: absolute;
     top: 2px;
@@ -554,6 +538,28 @@ header {
     width: 0%; }
   100% {
     width: 100%; } }
+          header .main-nav ul li a .deactiveLink {
+            color: #23527c;
+            position: relative;
+            text-decoration: none; }
+            header .main-nav ul li a .deactiveLink:active {
+              text-decoration: none; }
+            header .main-nav ul li a .deactiveLink:hover {
+              text-decoration: none; }
+            header .main-nav ul li a .deactiveLink:after {
+              position: absolute;
+              left: 0;
+              top: 21px;
+              content: "";
+              width: 100%;
+              height: 2px;
+              border-bottom: 2px solid #23527c;
+              animation: slideOutLine 0.5s forwards; }
+@keyframes slideOutLine {
+  0% {
+    width: 100%; }
+  100% {
+    width: 0%; } }
         header .main-nav ul li .closer {
           display: inline-block;
           padding-left: 6px;

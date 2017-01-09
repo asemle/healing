@@ -1,5 +1,5 @@
 angular.module("healing")
-.controller('payCtrl', function($scope) {
+.controller('payCtrl', function($scope, $state) {
   $('.background').bind('scroll', function() {
      if ($('.background').scrollTop() > 0) {
          $('header').fadeOut('fast');
@@ -16,17 +16,25 @@ angular.module("healing")
      });
 
 
-  // $('#payment-form').submit(function(event) {
-  //   $('#charge-error').hide();
-  //   const $form = $(this);
-  //   $form.find('button').prop('disabled', true);
-  //   Stripe.card.createToken($form, stripeResponseHandler);
-  //   return false;
-  // });
+  function stripeResponseHandler(status, response) {
+    if (response.error) {
+      $('#charge-error').show();
+      $('.payment-errors').text(response.error.message);
+      $('.submit').removeAttr('disabled');
+    } else {
+      const $form = $('#payment-form');
+      const token = response.id;
+      console.log(response.id)
+      $form.append('<input type="hidden" name="stripeToken" value="' + token + '"/>');
+      $form.get(0).submit()
+    }
+  }
+
 
      $(function() {
        const $form = $('#payment-form');
        $form.submit(function(event) {
+         $('.payment-errors').hide();
          // Disable the submit button to prevent repeated clicks:
         $form.find('.submit').prop('disabled', true);
 
@@ -37,17 +45,5 @@ angular.module("healing")
         return false;
       });
     });
-
-    function stripeResponseHandler(status, response) {
-  if (response.error) {
-    $('#charge-error').show();
-    $('.payment-errors').text(response.error.message);
-    $('.submit-button').removeAttr('disabled');
-  } else {
-    const $form = $('#payment-form');
-    const token = response.id;
-    $form.append('<input type="hidden" name="stripeToken" value="' + token + '"/>');
-    $form.get(0).submit();
-  }
 
 })

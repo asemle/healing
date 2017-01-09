@@ -37,7 +37,7 @@ module.exports = {
       }
     })
   } else {
-    db.add_paymentdl([req.body.sender, req.body.amount, req.body.description], function(err, response) {
+    db.add_paymentdl([req.body.sender, req.body.amount, req.body.description, req.body.email], function(err, response) {
       if(!err) {
         db.get_payments(function(err, payments) {
           res.status(200).send(payments)
@@ -48,6 +48,25 @@ module.exports = {
     })
   }
   },
+  addPaymentFromStripe: function(req, res) {
+    db.add_paymentdl([req.body.sender, req.body.amount, req.body.description, req.body.email, req.body.stripeToken], function(err, response) {
+      if(!err) {
+        res.status(200).send()
+        } else {
+        res.status(422).send(err)
+      }
+    })
+  },
+  addToken: function(req, res) {
+      db.add_token([req.body.email, req.body.stripeToken], function(err, response) {
+        if(!err) {
+          res.status(200).send();
+        }
+        else {
+          console.log(err)
+        }
+      })
+    },
   deletePayment: function(req, res) {
     db.delete_payment([req.params.id], function(err, response) {
       if(!err) {

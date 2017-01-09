@@ -18,14 +18,21 @@
     <ul class>
       <li class="aboutNav"><a ui-sref="about"><span ng-class="{activeLink: state === 'about'}">About Lisa</span></a><a class="closer aboutCloser" ui-sref="home"><span ng-show="state === 'about'"> x</span></a></li>
       <li class="testNav"><a ui-sref="testimonials"><span ng-class="{activeLink: state === 'testimonials'}">Testimonials</span></a><a class="closer testCloser" ui-sref="home"><span ng-show="state === 'testimonials'"> x</span></a></li>
-      <li class='storeNav'><a ui-sref="store"><span ng-class="{activeLink: state === 'store'}">For Sale</span></a><a class="closer storeCloser"ui-sref="home"><span ng-show="state === 'store'"> x</span></a></li>
+      <li class='storeNav'>
+        <a ui-sref="store">
+          <span ng-class="{activeLink: state === 'store'}">For Sale</span>
+        </a>
+        <a class="closer storeCloser" ui-sref="home">
+          <span ng-show="state === 'store'"> x</span>
+        </a>
+      </li>
     </ul>
   </nav>
   <div class='connect'>
     <a ui-sref="contact"><span class="glyphicon glyphicon-envelope"></span></a>
   </div>
   <div class="loginLink">
-    <a ng-dblclick="goToTargetState()"><span class="glyphicon glyphicon-th-large"></span></a>
+    <a ng-dblclick="goToTargetState('login')"><span class="glyphicon glyphicon-th-large"></span></a>
   </div>
 </header>
 
@@ -36,7 +43,7 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js" charset="utf-8"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-touch/1.6.0/angular-touch.min.js" charset="utf-8"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.min.js" charset="utf-8"></script>
@@ -52,6 +59,7 @@
 <script src="js/loginService.js" charset="utf-8"></script>
 <script src="js/statementsCtrl.js" charset="utf-8"></script>
 <script src="js/payCtrl.js" charset="utf-8"></script>
+<script src="js/payService.js" charset="utf-8"></script>
 <script src="js/statementsService.js" charset="utf-8"></script>
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 <script src="https://checkout.stripe.com/checkout.js"></script>

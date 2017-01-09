@@ -29,6 +29,9 @@ angular.module('healing', ['ui.router','ui.bootstrap', 'ngTouch', 'ngAnimate'])
     templateUrl:'/views/pay.html',
     url:'/pay',
     controller: 'payCtrl'
+  }).state('thanks', {
+    templateUrl:'/views/thanks.html',
+    url:'/thanks'
   }).state('statements', {
     templateUrl:'./views/statements.html',
     url:'/statements',

@@ -1,10 +1,10 @@
 <div class="payWrap">
-    <form action="/stripe" method="POST" id="payment-form">
-      <div class="lotusBox">
+    <form role="form" action="/stripe" method="POST" id="payment-form">
+      <!-- <div class="lotusBox">
         <div class="vase">
-          <!-- <img src="../css/media/lotus.png" alt=""> -->
+          <img src="../css/media/lotus.png" alt="">
         </div>
-      </div>
+      </div> -->
       <span class="glyphicon glyphicon-remove-circle" ng-click="$('.background').scrollTop(0);" ui-sref="home"></span>
         <span class="payment-errors"></span>
 
@@ -17,13 +17,13 @@
         <div class="form-row">
           <label>
             <span class="inputName">Email</span>
-            <input class="inputColumn" type="text" size="25">
+            <input class="inputColumn" ng-model="senderEmail" type="text" size="25">
           </label>
         </div>
         <div class="form-row">
           <label>
             <span class="inputName">Amount</span>
-            <input class="inputColumn" type="number" ng-model="newAmount" size="7" data-stripe="number" ng-model="amount" required>
+            <input class="inputColumn" type="number" step="0.01" ng-model="newAmount" size="7" data-stripe="number" ng-model="amount" required>
           </label>
         </div>
 
@@ -58,9 +58,10 @@
             </label>
         </div>
 
-        <div class="form-row">
-
-        </div>
+        <input style="display:none" name="amount" value="{{newAmount}}">
+        <input style="display:none" name="sender" value="{{newSender}}">
+        <input style="display:none" name="description" value="{{newDescr}}">
+        <input style="display:none" name="email" value="{{senderEmail}}">
         <input id="sendButton" type="submit" class="submit" value="Send {{newAmount | currency}}">
     </form>
 </div>
