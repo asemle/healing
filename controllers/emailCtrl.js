@@ -15,8 +15,8 @@ module.exports = function mailSend(req, res) {
   var transporter = nodeMailer.createTransport(smtpTransport(options))
   //Mail options
   mailOpts = {
-      from: req.body.email , //grab form data from the request body object
-      to: config.user,
+      from: '<'+req.body.email+'>' , //grab form data from the request body object
+      to: 'lsemle@msn.com',
       subject: req.body.name + " contacted you from HealingwithLisa",
       html: '<p>' + req.body.message + '</p>' + '<p>' + req.body.name + '</p>' + '<b>' + req.body.email + '</b>',
   };

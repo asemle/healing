@@ -155,7 +155,7 @@ body {
     border-radius: 5px;
     padding: 20px;
     display: none;
-    margin: 40% auto; }
+    margin: 30% auto; }
     .connection .messageSent p {
       text-align: center;
       font-size: 19px;
@@ -321,10 +321,13 @@ body {
     background-color: #F6F6F6;
     border-color: white;
     border-width: medium;
+    border-radius: 7px;
+    color: #23527c;
     transition: 0.2s all; }
     .storeWrap input:hover {
       box-shadow: 1px 0px 10px whitesmoke;
-      border-style: double; }
+      border-style: double;
+      border-radius: 10px; }
     .storeWrap input:focus {
       outline: none; }
 

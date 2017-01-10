@@ -48,10 +48,13 @@
     background-color: #F6F6F6;
     border-color: white;
     border-width: medium;
+    border-radius: 7px;
+    color: #23527c;
     transition: 0.2s all;
     &:hover {
       box-shadow: 1px 0px 10px whitesmoke;
       border-style: double;
+      border-radius: 10px;
     }
     &:focus {
       outline: none;
