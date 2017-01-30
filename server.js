@@ -9,7 +9,7 @@ var config = require('./config.js');
 var stripe = require('stripe')("sk_test_Yw5UZOvYBDIxIjTTc2CwTEsZ");
 var smtpTransport = require('nodemailer-smtp-transport');
 var conn = massive.connectSync({
-    connectionString: process.env.DATABASE_URL;
+    connectionString: process.env.DATABASE_URL
 })
 
 // stripe.setPublishableKey('pk_test_kVcN290woepedGKOFhaRWZyp');
