@@ -5,7 +5,7 @@ var nodeMailer = require('nodemailer');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var massive = require('massive');
-var config = require('./config.js');
+// var config = require('./config.js');
 var stripe = require('stripe')("sk_test_Yw5UZOvYBDIxIjTTc2CwTEsZ");
 var smtpTransport = require('nodemailer-smtp-transport');
 var conn = massive.connectSync({
@@ -26,7 +26,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(cors());
-app.use(session({ secret: config.sessionSecret }));
+app.use(session({ secret: process.env.sessionSecret }));
 app.use(passport.initialize());
 app.use(passport.session());
 
