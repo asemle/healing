@@ -16,7 +16,7 @@ var conn = massive.connectSync({
 
 var cors = require('cors');
 
-var port = 8000;
+var port = process.env.PORT || 8000;
 
 var app = module.exports = express();
 
