@@ -11,9 +11,8 @@ var smtpTransport = require('nodemailer-smtp-transport');
 var conn = massive.connectSync({
     connectionString: process.env.DATABASE_URL
 })
-
 // stripe.setPublishableKey('pk_test_kVcN290woepedGKOFhaRWZyp');
-
+var doofus = require('EC90FEA371C4E6371E143CB9BAF617B7.txt')
 var cors = require('cors');
 
 var port = process.env.PORT || 8000;
@@ -59,6 +58,10 @@ passport.use(new LocalStrategy(
 ));
 
 // console.log(mailSend.toString());
+app.get('/EC90FEA371C4E6371E143CB9BAF617B7.txt', function(req, res) {
+  res.status(200).send(doofus)
+})
+
 app.post('/contacted', mailSend);
 app.get('/payments', dbCtrl.getPayments);
 app.post('/payments', dbCtrl.addPayment);
