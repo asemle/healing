@@ -5,7 +5,7 @@ var nodeMailer = require('nodemailer');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var massive = require('massive');
-// var config = require('./config.js');
+
 var stripe = require('stripe')("sk_test_Yw5UZOvYBDIxIjTTc2CwTEsZ");
 var smtpTransport = require('nodemailer-smtp-transport');
 var conn = massive.connectSync({
