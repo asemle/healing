@@ -16,7 +16,7 @@ module.exports = function mailSend(req, res) {
   //Mail options
   mailOpts = {
       from: '<'+req.body.email+'>',
-      to: 'lsemle@msn.com',
+      to: 'lisasemle@gmail.com',
       subject: req.body.name + " contacted you from HealingwithLisa",
       html: '<p>' + req.body.message + '</p>' + '<p>' + req.body.name + '</p>' + '<b>' + req.body.email + '</b>',
   };
