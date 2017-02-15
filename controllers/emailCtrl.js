@@ -1,5 +1,5 @@
-var nodeMailer = require('nodeMailer');
-var config = require('./../config');
+var nodeMailer = require('nodemailer');
+
 var smtpTransport = require('nodemailer-smtp-transport');
 
 
@@ -8,8 +8,8 @@ module.exports = function mailSend(req, res) {
   var options = {
     service: 'gmail',
     auth: {
-        user: config.user,
-        pass: config.password
+        user: process.env.user,
+        pass: process.env.password
     }
   };
   var transporter = nodeMailer.createTransport(smtpTransport(options))
