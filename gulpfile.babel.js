@@ -1,4 +1,4 @@
-import gulp from 'gulp';
+ import gulp from 'gulp';
 import concat from 'gulp-concat'; //bundles files
  //sass compiling/translating
 import babel from 'gulp-babel'; //es6 translating

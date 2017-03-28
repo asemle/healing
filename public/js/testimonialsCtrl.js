@@ -21,6 +21,10 @@ angular.module('healing')
 
   var testimonials = [
     {
+      quote: "Thanks for clearing up several issues during our call last night. I had the best nights sleep and woke up with a great feeling and weight off of my mind and body. You are amazing and I greatly appreciate your soulful talent. You are a light from above.",
+      client: " - Scot W"
+    },
+    {
       quote: "You have helped me tremendously with the Candida and my sinus issues, both decade long problems. It has literally been life changing. I have never felt better physically or emotionally!",
       client: " - Maria M"
     },
